@@ -24,28 +24,10 @@
    <iframe width="560" height="315" src="https://www.youtube.com/embed/QMQOWdMVMzE" frameborder="0" allowfullscreen></iframe>
    
    <!--Color picker-->
-   <div class="blog-post">
-          <h2>HTML Color Picker</h2>
-		  <p>Desplace la barra de desplazamiento horizontal para elegir el color y después haga clic en el cuadro de colores a la izquierda para conseguir el Código de color HTML para elegir el tono de color deseado.</p>
-			<canvas class="columns" id="cpcanvas" width="770" height="400" style="padding:0px"></canvas>
-			<br>
-			<span class="columns" style="background-image: url('/img/grad-min.png');background-size: 100%;padding:0px; margin-bottom:20px;"><input type="range" min="0" max="359" value="0" id="HUE"></span>
-			<form>
-			  <div class="row">
-				<div class="small-6 medium-5 large-7 columns">
-				  <label for="middle-label" class="text-right middle bigtext">Código de color:</label>
-				</div>
-				<div class="small-4 medium-5 large-3 columns">
-				  <input type="text" id="cppixcolor" style="font-size: 20px;height:57px">
-				</div>
-				<div class="small-1 medium-1 columns" id="cpcolor" style="background-color: rgb(246, 247, 211);">
-					<label for="middle-label" class="text-right middle">&nbsp;</label>
-				</div>
-				<div class="small-1 medium-1 columns"></div>
-			  </div>
-			</form>
-    </div>
-   
+   <script src="jscolor.js"></script>
+
+   Color: <input class="jscolor" value="ab2567">
+   <a href="http://jscolor.com">Código fuente</a>
   </center>
   <p><strong>Links útiles:</strong></p> <!--strong works as bold-->
    <ul> <!--This makes a list-->
