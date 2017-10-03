@@ -21,124 +21,102 @@
    <h1><strong>Teoría</strong></h1>
    <h2>Está por acabar 😬</h2>
   </center>
-	
-<p>&nbsp;</p>
-<!--By Ramón Hernández García @ Copyright 2017-->
-<p>&nbsp;</p>
-<!--Website title-->
-<p>&nbsp;</p>
-<!--Webpage icon - Spain flag-->
-<p>&nbsp;</p>
-<!--Meta_tags-->
-<p>&nbsp;</p>
-<!--I'll center some things--><center><!--Headers test (it reaches <h5>)-->
-<h1><strong>Teor&iacute;a</strong></h1>
-<h2>Est&aacute; por acabar 😬</h2>
-</center>
-<div class="post-content-container post-content-container-first-post">
-<div id="td_post_72534807" class="postbit-content postbit-content-moderated">
-<h4 class="post-text post-first-post"><!-- AD LOCATION: showthread_firstpoststart_desktop --></h4>
-<div id="purch_Y_R_1_2" class="purchad" style="float: right; margin-left: 5px; width: 300px; height: 250px; min-height: 250px; max-height: 250px; overflow: hidden;">&nbsp;</div>
-<h4 class="post-text post-first-post"><!-- / AD LOCATION: showthread_firstpoststart_desktop -->Aqu&iacute; voy a ir apuntando lo que aprenda de HTML para probar los cuadros de c&oacute;digo<br /> <br /> <strong><span style="font-size: xx-large;">&Iacute;ndice</span></strong></h4>
-<ul>
-<li><a href="#page_beginning">C&oacute;mo empezar la p&aacute;gina.</a> Nociones b&aacute;sicas</li>
-<li>C&oacute;digos &uacute;tiles</li>
-<li>M&aacute;s cosillas</li>
-</ul>
-<h4 class="post-text post-first-post"><br /> <strong><span id="page_beginning" style="font-size: xx-large;">C&oacute;mo empezar la p&aacute;gina.</span></strong><br /> <br /><span style="color: #0000ff;"><span style="font-size: x-large;"><strong>!DOCTYPE</strong></span></span><br /> Esto es el c&oacute;digo b&aacute;sico para que un archivo HTML sea le&iacute;do por un navegador:</h4>
-<div style="margin: 20px; margin-top: 5px;">
-<pre class="alt2 " dir="ltr" style="margin: 0px; padding: 5px; border: 1px inset; width: 100%; height: 34px; text-align: left; overflow: auto;">&lt;!DOCTYPE HTML&gt;<br />&lt;html&gt;<br />&lt;head&gt;<br />&lt;/head&gt;<br />&lt;body&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;</pre>
-</div>
-<h4 class="post-text post-first-post"><strong><span style="color: blue;"><span style="font-size: x-large;">Installing required packages</span></span></strong><br /> For that you can follow the steps on <a href="https://wiki.lineageos.org/devices/nicki/build#install-the-build-packages" target="_blank" rel="nofollow noopener">https://wiki.lineageos.org/devices/n...build-packages</a><br /> <br /> <strong><span style="color: blue;"><span style="font-size: x-large;">Setting up directories</span></span></strong><br /> Create a folder in which android source will be downloaded</h4>
-<div style="margin: 20px; margin-top: 5px;">
-<div class="smallfont" style="margin-bottom: 2px;">Code:</div>
-<pre class="alt2 " dir="ltr" style="margin: 0px; padding: 5px; border: 1px inset; width: 100%; height: 34px; text-align: left; overflow: auto;">mkdir -p ~/android/lineage</pre>
-</div>
-<h4 class="post-text post-first-post"><strong><span style="color: red;"><span style="font-size: medium;">Note: </span></span></strong>"~/android/lineage" is an example, you can create whatever folder you want, but in the next steps be sure you change paths.<br /> <br /> <strong><span style="color: blue;"><span style="font-size: x-large;">Install the repo command</span></span></strong><br /> Like before you only need to run</h4>
-<div style="margin: 20px; margin-top: 5px;">
-<div class="smallfont" style="margin-bottom: 2px;">Code:</div>
-<pre class="alt2 " dir="ltr" style="margin: 0px; padding: 5px; border: 1px inset; width: 100%; height: 34px; text-align: left; overflow: auto;">sudo apt-get install repo</pre>
-</div>
-<h4 class="post-text post-first-post"><strong><span style="color: blue;"><span style="font-size: x-large;">Initialize the LineageOS source repository</span></span></strong><br /> Now we can start to prepare sources download. Enter the following to initialize the repository:</h4>
-<div style="margin: 20px; margin-top: 5px;">
-<div class="smallfont" style="margin-bottom: 2px;">Code:</div>
-<pre class="alt2 " dir="ltr" style="margin: 0px; padding: 5px; border: 1px inset; width: 100%; height: 50px; text-align: left; overflow: auto;">cd ~/android/lineage
-repo init -u https://github.com/LineageOS/android.git -b cm-14.1</pre>
-</div>
-<h4 class="post-text post-first-post">And we need to prepare local manifests:</h4>
-<div style="margin: 20px; margin-top: 5px;">
-<div class="smallfont" style="margin-bottom: 2px;">Code:</div>
-<pre class="alt2 " dir="ltr" style="margin: 0px; padding: 5px; border: 1px inset; width: 100%; height: 34px; text-align: left; overflow: auto;">git clone https://github.com/rmnhg/local_manifests.git -b cm-14.1 .repo/local_manifests</pre>
-</div>
-<h4 class="post-text post-first-post"><strong><span style="color: blue;"><span style="font-size: x-large;">Download the source code</span></span></strong><br /> To start the download of the source code to your computer:<br /> </h4>
-<div style="margin: 20px; margin-top: 5px;">
-<div class="smallfont" style="margin-bottom: 2px;">Code:</div>
-<pre class="alt2 " dir="ltr" style="margin: 0px; padding: 5px; border: 1px inset; width: 100%; height: 34px; text-align: left; overflow: auto;">repo sync</pre>
-</div>
-<h4 class="post-text post-first-post"><span style="color: red;"><strong><span style="font-size: medium;">Note: </span></strong></span>This process will be long (over 30gb are going to be downloaded) and can be longer if your connection is slow so be patience.<br /> <br /> <strong><span style="color: blue;"><span style="font-size: x-large;">Prepare the device-specific code</span></span></strong><br /> After the source downloads, ensure you&rsquo;re in the root of the source code, then type:</h4>
-<div style="margin: 20px; margin-top: 5px;">
-<div class="smallfont" style="margin-bottom: 2px;">Code:</div>
-<pre class="alt2 " dir="ltr" style="margin: 0px; padding: 5px; border: 1px inset; width: 100%; height: 50px; text-align: left; overflow: auto;">source build/envsetup.sh
-breakfast flamingo</pre>
-</div>
-<h4 class="post-text post-first-post">This will prepare flamingo sources to be compiled.<br /> <br /> <strong><span style="color: blue;"><span style="font-size: x-large;">(Optional) Turn on caching to speed up build</span></span></strong></h4>
-<div class="bbcode-hide" style="margin: 20px; margin-top: 5px;"><input style="font-size: 12px; padding: 5px; display: block; margin: 0; width: 175px; cursor: pointer; text-align: center; text-transform: uppercase;" type="button" value="Click To Show Content" />
-<div style="display: none;">You can setup ccache if you want to speed up subsequent builds by running:<br /> <br />
-<div style="margin: 20px; margin-top: 5px;">
-<div class="smallfont" style="margin-bottom: 2px;">Code:</div>
-<pre class="alt2 " dir="ltr" style="margin: 0px; padding: 5px; border: 1px inset; width: 100%; height: 34px; text-align: left; overflow: auto;">export USE_CCACHE=1</pre>
-</div>
-and adding that line to your ~/.bashrc file. Then, specify the maximum amount of disk space you want ccache to use by typing this from the top of your Android tree:<br />
-<div style="margin: 20px; margin-top: 5px;">
-<div class="smallfont" style="margin-bottom: 2px;">Code:</div>
-<pre class="alt2 " dir="ltr" style="margin: 0px; padding: 5px; border: 1px inset; width: 100%; height: 34px; text-align: left; overflow: auto;">prebuilts/misc/linux-x86/ccache/ccache -M 50G</pre>
-</div>
-where 50G corresponds to 50GB of cache. This needs to be run once. Anywhere from 25GB-100GB will result in very noticeably increased build speeds (for instance, a typical 1hr build time can be reduced to 20min). If you&rsquo;re only building for one device, 25GB-50GB is fine. If you plan to build for several devices that do not share the same kernel source, aim for 75GB-100GB. This space will be permanently occupied on your drive, so take this into consideration. See more information about ccache on Google&rsquo;s Android build environment initialization page.<br /> <br /> You can also enable the optional ccache compression. While this may involve a tiny performance slowdown, it increases the number of files that fit in the cache. To enable it, run:<br />
-<div style="margin: 20px; margin-top: 5px;">
-<div class="smallfont" style="margin-bottom: 2px;">Code:</div>
-<pre class="alt2 " dir="ltr" style="margin: 0px; padding: 5px; border: 1px inset; width: 100%; height: 34px; text-align: left; overflow: auto;">export CCACHE_COMPRESS=1</pre>
-</div>
-or add that line to your ~/.bashrc file.<br /> <br /> You can also change ccache files path by running:<br />
-<div style="margin: 20px; margin-top: 5px;">
-<div class="smallfont" style="margin-bottom: 2px;">Code:</div>
-<pre class="alt2 " dir="ltr" style="margin: 0px; padding: 5px; border: 1px inset; width: 100%; height: 34px; text-align: left; overflow: auto;">export CCACHE_DIR=<span style="color: yellowgreen;">&lt;path of your choice&gt;</span></pre>
-</div>
-or add that line to your ~/.bashrc file.</div>
-</div>
-<h4 class="post-text post-first-post"><br /> <br /> <strong><span style="color: blue;"><span style="font-size: x-large;">Configure jack</span></span></strong><br /> Jack is the new Java compiler used when building LineageOS 14.1. It is known to run out of memory - a simple fix is to run this command:</h4>
-<div style="margin: 20px; margin-top: 5px;">
-<div class="smallfont" style="margin-bottom: 2px;">Code:</div>
-<pre class="alt2 " dir="ltr" style="margin: 0px; padding: 5px; border: 1px inset; width: 100%; height: 34px; text-align: left; overflow: auto;">export ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4G"</pre>
-</div>
-<h4 class="post-text post-first-post">Adding that command to your ~/.bashrc file will automatically configure Jack to allocate a sufficient amount of memory.<br /> <br /> <strong><span style="color: blue;"><span style="font-size: x-large;">Start building</span></span></strong><br /> Now you can start compiling LineageOS. You can start running:</h4>
-<div style="margin: 20px; margin-top: 5px;">
-<div class="smallfont" style="margin-bottom: 2px;">Code:</div>
-<pre class="alt2 " dir="ltr" style="margin: 0px; padding: 5px; border: 1px inset; width: 100%; height: 50px; text-align: left; overflow: auto;">croot
-brunch flamingo</pre>
-</div>
-<h4 class="post-text post-first-post"><span style="color: red;"><strong>NOTE: </strong></span>If terminal tells you "croot/breakfast: command not found" just run</h4>
-<div style="margin: 20px; margin-top: 5px;">
-<div class="smallfont" style="margin-bottom: 2px;">Code:</div>
-<pre class="alt2 " dir="ltr" style="margin: 0px; padding: 5px; border: 1px inset; width: 100%; height: 34px; text-align: left; overflow: auto;">source build/envsetup.sh</pre>
-</div>
-<h4 class="post-text post-first-post">and try again.<br /> This will finally compile LineageOS for flamingo <img class="inlineimg" title="Good" src="//forum.xda-cdn.com/images/smilies/good.gif" alt="" border="0" data-pagespeed-url-hash="2931529228" /><br /> If it finishes succesfully, you will have in out/target/product/flamingo two files:<br /> <strong> recovery.img, </strong>which is the LineageOS recovery image.<br /> <strong>lineage-14.1-<span style="color: yellowgreen;">&lt;date&gt;</span>-UNOFFICIAL-flamingo.zip,</strong> which is the LineageOS installer package.<br /> <br /> You have to flash ano and copy installer zip into the phone.<br /> Then reboot into recovery (Power+Vol down) and install this zip.<br /> You can flash flash recovery running</h4>
-<div style="margin: 20px; margin-top: 5px;">
-<div class="smallfont" style="margin-bottom: 2px;">Code:</div>
-<pre class="alt2 " dir="ltr" style="margin: 0px; padding: 5px; border: 1px inset; width: 100%; height: 34px; text-align: left; overflow: auto;">sudo fastboot -s 256M flash recovery <span style="color: yellowgreen;">&lt;pathtorecovery.img&gt;</span></pre>
-</div>
-<h4 class="post-text post-first-post">Thanks to @<a href="https://forum.xda-developers.com/member.php?u=7408719" target="_blank" rel="noopener">infus</a> for his trick (-s 256M) with fastboot commands for big images.<br /> <br /> I hope this guide has been useful for you <img class="inlineimg" title="Wink" src="//forum.xda-cdn.com/images/smilies/wink.gif" alt="" border="0" data-pagespeed-url-hash="1749262442" /><br /> <br /> <span style="font-size: x-large;"><span style="color: royalblue;">PD: If you want to discuss about development of this ROM, you can join our Telegram group here.</span></span></h4>
-<div align="center"><a href="https://t.me/xperia_e3" target="_blank" rel="nofollow noopener"><strong>Join now</strong></a></div>
-</div>
-</div>
-<p><strong>Links &uacute;tiles:</strong></p>
-<!--strong works as bold-->
-<ul><!--This makes a list-->
-<li><a href="https://html-online.com/editor/" target="_blank" rel="noopener">Para probar c&oacute;digo html</a></li>
-<li><a href="http://www.makeuseof.com/tag/7-cool-html-effects-that-anyone-can-add-to-their-website-nb/" target="_blank" rel="noopener">Para poner efectos guays</a></li>
-<li><a href="https://html-color-codes.info/codigos-de-colores-hexadecimales/" target="_blank" rel="noopener">Selector colores</a></li>
-<li><a href="https://rmnhg.github.io/testing.html">Tester (en construcci&oacute;n)</a></li>
-<li><a href="https://rmnhg.github.io/">P&aacute;gina principal</a></li>
-</ul>
+
+  <div class="post-content-container post-content-container-first-post">
+  <div id="td_post_72534807" class="postbit-content postbit-content-moderated">
+  <h4 class="post-text post-first-post"><!-- AD LOCATION: showthread_firstpoststart_desktop --></h4>
+  <div id="purch_Y_R_1_2" class="purchad" style="float: right; margin-left: 5px; width: 300px; height: 250px; min-height: 250px; max-height: 250px; overflow: hidden;">&nbsp;</div>
+  <h4 class="post-text post-first-post"><!-- / AD LOCATION: showthread_firstpoststart_desktop -->Aqu&iacute; voy a ir apuntando lo que aprenda de HTML para probar los cuadros de c&oacute;digo<br /> <br /> <strong><span style="font-size: xx-large;">&Iacute;ndice</span></strong></h4>
+  <ul>
+  <li><a href="#page_beginning">C&oacute;mo empezar la p&aacute;gina.</a> Nociones b&aacute;sicas</li>
+  <li>C&oacute;digos &uacute;tiles</li>
+  <li>M&aacute;s cosillas</li>
+  </ul>
+  <h4 class="post-text post-first-post"><br /> <strong><span id="page_beginning" style="font-size: xx-large;">C&oacute;mo empezar la p&aacute;gina.</span></strong><br /> <br /><span style="color: #0000ff;"><span style="font-size: x-large;"><strong>!DOCTYPE</strong></span></span><br /> Esto es el c&oacute;digo b&aacute;sico para que un archivo HTML sea le&iacute;do por un navegador:</h4>
+  <div style="margin: 20px; margin-top: 5px;">
+  <pre class="alt2 " dir="ltr" style="margin: 0px; padding: 5px; border: 1px inset; width: 100%; height: 34px; text-align: left; overflow: auto;">&lt;!DOCTYPE HTML&gt;<br />&lt;html&gt;<br />&lt;head&gt;<br />&lt;/head&gt;<br />&lt;body&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;</pre>
+  </div>
+  <h4 class="post-text post-first-post"><strong><span style="color: blue;"><span style="font-size: x-large;">Installing required packages</span></span></strong><br /> For that you can follow the steps on <a href="https://wiki.lineageos.org/devices/nicki/build#install-the-build-packages" target="_blank" rel="nofollow noopener">https://wiki.lineageos.org/devices/n...build-packages</a><br /> <br /> <strong><span style="color: blue;"><span style="font-size: x-large;">Setting up directories</span></span></strong><br /> Create a folder in which android source will be downloaded</h4>
+  <div style="margin: 20px; margin-top: 5px;">
+  <div class="smallfont" style="margin-bottom: 2px;">Code:</div>
+  <pre class="alt2 " dir="ltr" style="margin: 0px; padding: 5px; border: 1px inset; width: 100%; height: 34px; text-align: left; overflow: auto;">mkdir -p ~/android/lineage</pre>
+  </div>
+  <h4 class="post-text post-first-post"><strong><span style="color: red;"><span style="font-size: medium;">Note: </span></span></strong>"~/android/lineage" is an example, you can create whatever folder you want, but in the next steps be sure you change paths.<br /> <br /> <strong><span style="color: blue;"><span style="font-size: x-large;">Install the repo command</span></span></strong><br /> Like before you only need to run</h4>
+  <div style="margin: 20px; margin-top: 5px;">
+  <div class="smallfont" style="margin-bottom: 2px;">Code:</div>
+  <pre class="alt2 " dir="ltr" style="margin: 0px; padding: 5px; border: 1px inset; width: 100%; height: 34px; text-align: left; overflow: auto;">sudo apt-get install repo</pre>
+  </div>
+  <h4 class="post-text post-first-post"><strong><span style="color: blue;"><span style="font-size: x-large;">Initialize the LineageOS source repository</span></span></strong><br /> Now we can start to prepare sources download. Enter the following to initialize the repository:</h4>
+  <div style="margin: 20px; margin-top: 5px;">
+  <div class="smallfont" style="margin-bottom: 2px;">Code:</div>
+  <pre class="alt2 " dir="ltr" style="margin: 0px; padding: 5px; border: 1px inset; width: 100%; height: 50px; text-align: left; overflow: auto;">cd ~/android/lineage
+  repo init -u https://github.com/LineageOS/android.git -b cm-14.1</pre>
+  </div>
+  <h4 class="post-text post-first-post">And we need to prepare local manifests:</h4>
+  <div style="margin: 20px; margin-top: 5px;">
+  <div class="smallfont" style="margin-bottom: 2px;">Code:</div>
+  <pre class="alt2 " dir="ltr" style="margin: 0px; padding: 5px; border: 1px inset; width: 100%; height: 34px; text-align: left; overflow: auto;">git clone https://github.com/rmnhg/local_manifests.git -b cm-14.1 .repo/local_manifests</pre>
+  </div>
+  <h4 class="post-text post-first-post"><strong><span style="color: blue;"><span style="font-size: x-large;">Download the source code</span></span></strong><br /> To start the download of the source code to your computer:<br /> </h4>
+  <div style="margin: 20px; margin-top: 5px;">
+  <div class="smallfont" style="margin-bottom: 2px;">Code:</div>
+  <pre class="alt2 " dir="ltr" style="margin: 0px; padding: 5px; border: 1px inset; width: 100%; height: 34px; text-align: left; overflow: auto;">repo sync</pre>
+  </div>
+  <h4 class="post-text post-first-post"><span style="color: red;"><strong><span style="font-size: medium;">Note: </span></strong></span>This process will be long (over 30gb are going to be downloaded) and can be longer if your connection is slow so be patience.<br /> <br /> <strong><span style="color: blue;"><span style="font-size: x-large;">Prepare the device-specific code</span></span></strong><br /> After the source downloads, ensure you&rsquo;re in the root of the source code, then type:</h4>
+  <div style="margin: 20px; margin-top: 5px;">
+  <div class="smallfont" style="margin-bottom: 2px;">Code:</div>
+  <pre class="alt2 " dir="ltr" style="margin: 0px; padding: 5px; border: 1px inset; width: 100%; height: 50px; text-align: left; overflow: auto;">source build/envsetup.sh
+  breakfast flamingo</pre>
+  </div>
+  <h4 class="post-text post-first-post">This will prepare flamingo sources to be compiled.<br /> <br /> <strong><span style="color: blue;"><span style="font-size: x-large;">(Optional) Turn on caching to speed up build</span></span></strong></h4>
+  <div class="bbcode-hide" style="margin: 20px; margin-top: 5px;"><input style="font-size: 12px; padding: 5px; display: block; margin: 0; width: 175px; cursor: pointer; text-align: center; text-transform: uppercase;" type="button" value="Click To Show Content" />
+  <div style="display: none;">You can setup ccache if you want to speed up subsequent builds by running:<br /> <br />
+  <div style="margin: 20px; margin-top: 5px;">
+  <div class="smallfont" style="margin-bottom: 2px;">Code:</div>
+  <pre class="alt2 " dir="ltr" style="margin: 0px; padding: 5px; border: 1px inset; width: 100%; height: 34px; text-align: left; overflow: auto;">export USE_CCACHE=1</pre>
+  </div>
+  and adding that line to your ~/.bashrc file. Then, specify the maximum amount of disk space you want ccache to use by typing this from the top of your Android tree:<br />
+  <div style="margin: 20px; margin-top: 5px;">
+  <div class="smallfont" style="margin-bottom: 2px;">Code:</div>
+  <pre class="alt2 " dir="ltr" style="margin: 0px; padding: 5px; border: 1px inset; width: 100%; height: 34px; text-align: left; overflow: auto;">prebuilts/misc/linux-x86/ccache/ccache -M 50G</pre>
+  </div>
+  where 50G corresponds to 50GB of cache. This needs to be run once. Anywhere from 25GB-100GB will result in very noticeably increased build speeds (for instance, a typical 1hr build time can be reduced to 20min). If you&rsquo;re only building for one device, 25GB-50GB is fine. If you plan to build for several devices that do not share the same kernel source, aim for 75GB-100GB. This space will be permanently occupied on your drive, so take this into consideration. See more information about ccache on Google&rsquo;s Android build environment initialization page.<br /> <br /> You can also enable the optional ccache compression. While this may involve a tiny performance slowdown, it increases the number of files that fit in the cache. To enable it, run:<br />
+  <div style="margin: 20px; margin-top: 5px;">
+  <div class="smallfont" style="margin-bottom: 2px;">Code:</div>
+  <pre class="alt2 " dir="ltr" style="margin: 0px; padding: 5px; border: 1px inset; width: 100%; height: 34px; text-align: left; overflow: auto;">export CCACHE_COMPRESS=1</pre>
+  </div>
+  or add that line to your ~/.bashrc file.<br /> <br /> You can also change ccache files path by running:<br />
+  <div style="margin: 20px; margin-top: 5px;">
+  <div class="smallfont" style="margin-bottom: 2px;">Code:</div>
+  <pre class="alt2 " dir="ltr" style="margin: 0px; padding: 5px; border: 1px inset; width: 100%; height: 34px; text-align: left; overflow: auto;">export CCACHE_DIR=<span style="color: yellowgreen;">&lt;path of your choice&gt;</span></pre>
+  </div>
+  or add that line to your ~/.bashrc file.</div>
+  </div>
+  <h4 class="post-text post-first-post"><br /> <br /> <strong><span style="color: blue;"><span style="font-size: x-large;">Configure jack</span></span></strong><br /> Jack is the new Java compiler used when building LineageOS 14.1. It is known to run out of memory - a simple fix is to run this command:</h4>
+  <div style="margin: 20px; margin-top: 5px;">
+  <div class="smallfont" style="margin-bottom: 2px;">Code:</div>
+  <pre class="alt2 " dir="ltr" style="margin: 0px; padding: 5px; border: 1px inset; width: 100%; height: 34px; text-align: left; overflow: auto;">export ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4G"</pre>
+  </div>
+  <h4 class="post-text post-first-post">Adding that command to your ~/.bashrc file will automatically configure Jack to allocate a sufficient amount of memory.<br /> <br /> <strong><span style="color: blue;"><span style="font-size: x-large;">Start building</span></span></strong><br /> Now you can start compiling LineageOS. You can start running:</h4>
+  <div style="margin: 20px; margin-top: 5px;">
+  <div class="smallfont" style="margin-bottom: 2px;">Code:</div>
+  <pre class="alt2 " dir="ltr" style="margin: 0px; padding: 5px; border: 1px inset; width: 100%; height: 50px; text-align: left; overflow: auto;">croot
+  brunch flamingo</pre>
+  </div>
+  <h4 class="post-text post-first-post"><span style="color: red;"><strong>NOTE: </strong></span>If terminal tells you "croot/breakfast: command not found" just run</h4>
+  <div style="margin: 20px; margin-top: 5px;">
+  <div class="smallfont" style="margin-bottom: 2px;">Code:</div>
+  <pre class="alt2 " dir="ltr" style="margin: 0px; padding: 5px; border: 1px inset; width: 100%; height: 34px; text-align: left; overflow: auto;">source build/envsetup.sh</pre>
+  </div>
+  <h4 class="post-text post-first-post">and try again.<br /> This will finally compile LineageOS for flamingo <img class="inlineimg" title="Good" src="//forum.xda-cdn.com/images/smilies/good.gif" alt="" border="0" data-pagespeed-url-hash="2931529228" /><br /> If it finishes succesfully, you will have in out/target/product/flamingo two files:<br /> <strong> recovery.img, </strong>which is the LineageOS recovery image.<br /> <strong>lineage-14.1-<span style="color: yellowgreen;">&lt;date&gt;</span>-UNOFFICIAL-flamingo.zip,</strong> which is the LineageOS installer package.<br /> <br /> You have to flash ano and copy installer zip into the phone.<br /> Then reboot into recovery (Power+Vol down) and install this zip.<br /> You can flash flash recovery running</h4>
+  <div style="margin: 20px; margin-top: 5px;">
+  <div class="smallfont" style="margin-bottom: 2px;">Code:</div>
+  <pre class="alt2 " dir="ltr" style="margin: 0px; padding: 5px; border: 1px inset; width: 100%; height: 34px; text-align: left; overflow: auto;">sudo fastboot -s 256M flash recovery <span style="color: yellowgreen;">&lt;pathtorecovery.img&gt;</span></pre>
+  </div>
+  <h4 class="post-text post-first-post">Thanks to @<a href="https://forum.xda-developers.com/member.php?u=7408719" target="_blank" rel="noopener">infus</a> for his trick (-s 256M) with fastboot commands for big images.<br /> <br /> I hope this guide has been useful for you <img class="inlineimg" title="Wink" src="//forum.xda-cdn.com/images/smilies/wink.gif" alt="" border="0" data-pagespeed-url-hash="1749262442" /><br /> <br /> <span style="font-size: x-large;"><span style="color: royalblue;">PD: If you want to discuss about development of this ROM, you can join our Telegram group here.</span></span></h4>
+  <div align="center"><a href="https://t.me/xperia_e3" target="_blank" rel="nofollow noopener"><strong>Join now</strong></a></div>
+  </div>
+  </div>
 	
   <p><strong>Links útiles:</strong></p> <!--strong works as bold-->
    <ul> <!--This makes a list-->
