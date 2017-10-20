@@ -14,6 +14,8 @@
 	<meta name="Ramón HDEZ - Creador" content="Copyright 2017 (c) Ramón Hernández García.">
 	<meta name="robots" content="NOODP">
 	<meta name="description" content="Página personal de Ramón Hernández, estudiante madrileño.">
+	<meta name="keywords" content="Webpage, Ramón Hernández, rmnhg, kernel, linux, PC, Windows">
+	<meta name="author" content="Ramón Hernández´">
 
 	<!--Theme starts here-->	
 		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -33,7 +35,7 @@
 	<!--Theme ends here-->
 </HEAD>
 
-<BODY class="index-page" style="background-color:#FFFFFF;">
+<BODY class="index-page">
 
 	<!-- Navbar -->
 	<nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll">
@@ -89,7 +91,11 @@
 		<div class="container">
 			<div class="col-md-8 col-md-offset-2">
 				<div class="brand">
-					<h1>Pruebas</h1>
+					<h1>Laboratorio</h1>
+					<!--These entries are only for making parallax effect work-->
+					<div id="sliderRegular" class="slider" style="visibility: hidden;"></div>
+					<div id="sliderDouble" class="slider slider-info" style="visibility: hidden;"></div>
+					<!--Finish here-->
 				</div>
 			</div>
 		</div>
@@ -104,7 +110,7 @@
 	<h1><strong>Tester</strong></h1>
 	 
 	<!--Youtube embedded-->
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/QMQOWdMVMzE" frameborder="0" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/VBlFHuCzPgY?autoplay=1" frameborder="0" allowfullscreen></iframe>
 	 
 	<!--Color picker-->
 	<br> <!--End of line-->
@@ -139,7 +145,20 @@
 	<!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
 	<script src="assets/js/material-kit.js" type="text/javascript"></script>
 
-	<!-- Sharrre library just for Live Preview -->
-	<script src="assets/js/jquery.sharrre.js" type="text/javascript"></script>
+	<script type="text/javascript">
+
+		$().ready(function(){
+			// the body of this function is in assets/material-kit.js
+			materialKit.initSliders();
+            window_width = $(window).width();
+
+            if (window_width >= 992){
+                big_image = $('.wrapper > .header');
+
+				$(window).on('scroll', materialKitDemo.checkScrollForParallax);
+			}
+
+		});
+	</script>
 	
 </html>

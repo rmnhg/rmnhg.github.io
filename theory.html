@@ -33,7 +33,7 @@
 	<!--Theme ends here-->
 </HEAD>
 
-<BODY class="index-page" style="background-color:#FFFFFF;">
+<BODY class="index-page">
 
 	<!-- Navbar -->
 	<nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll">
@@ -64,7 +64,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="/testing.html">Pruebas
+						<a href="/testing.html">Laboratorio
 						</a>
 					</li>
 					<li>
@@ -90,6 +90,10 @@
 			<div class="col-md-8 col-md-offset-2">
 				<div class="brand">
 					<h1>Teoría</h1>
+					<!--These entries are only for making parallax effect work-->
+					<div id="sliderRegular" class="slider" style="visibility: hidden;"></div>
+					<div id="sliderDouble" class="slider slider-info" style="visibility: hidden;"></div>
+					<!--Finish here-->
 				</div>
 			</div>
 		</div>
@@ -116,7 +120,7 @@
 	</ul>
 	<br>
 
-	<p id="page_beginning" style="font-size: xx-large;"><strong>Cómo empezar la página.</strong></p>
+	<h2 id="page_beginning"><strong>Cómo empezar la página.</strong></h2>
   Este es el código básico para que un archivo HTML sea leído correctamente por un navegador:
 	<div style="margin: 20px; margin-top: 5px;">
 	<!--Code block-->
@@ -130,15 +134,15 @@
    Estos elementos se llaman tags o etiquetas. Todos tienen una etiqueta de entrada y otra de salida que empieza por "<strong>/</strong>" exceptuando la etiqueta <strong>&lt;br&gt;</strong>, que puede estar sola.
 	</p>
 	<br>
-	<h2><strong>Etiquetas de la cabezera de la página "&lt;head&gt;"</strong></h2>
+	<h3><strong>Etiquetas de la cabezera de la página "&lt;head&gt;"</strong></h3>
 	<p>La etiqueta <strong>head</strong> sirve para definir la estructura principal de la página.
 	</p>
 	<br>
-	<h1 id="body"><strong>Cuerpo. Códigos frecuentes.</strong></h1>
+	<h2 id="body"><strong>Cuerpo. Códigos frecuentes.</strong></h1>
 	<br>
   
 	<br>
-	<h1 id="more"><strong>Más cosillas: colores, tipos de texto, parametros, alineación, etc.</strong></h1>
+	<h2 id="more"><strong>Más cosillas: colores, tipos de texto, parametros, alineación, etc.</strong></h1>
 	<br>
   
 	<p><strong>Links útiles:</strong></p>
@@ -167,7 +171,20 @@
 	<!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
 	<script src="assets/js/material-kit.js" type="text/javascript"></script>
 
-	<!-- Sharrre library just for Live Preview -->
-	<script src="assets/js/jquery.sharrre.js" type="text/javascript"></script>
+	<script type="text/javascript">
 
+		$().ready(function(){
+			// the body of this function is in assets/material-kit.js
+			materialKit.initSliders();
+            window_width = $(window).width();
+
+            if (window_width >= 992){
+                big_image = $('.wrapper > .header');
+
+				$(window).on('scroll', materialKitDemo.checkScrollForParallax);
+			}
+
+		});
+	</script>
+	
 </html>
