@@ -135,8 +135,16 @@
 	</p>
 	<br>
 	<h3><strong>Etiquetas de la cabezera de la página "&lt;head&gt;"</strong></h3>
-	<p>La etiqueta <strong>head</strong> sirve para definir la estructura principal de la página.
+	<p>La etiqueta <strong>head</strong> sirve para definir la estructura principal de la página. Dentro de esta etiqueta puedes encontrar otras como:<br>
+	<strong>&lt;title&gt;&lt;/title&gt;</strong> como dice su nombre, se encarga de darle un título a la página que aparecerá en la pestaña del navegador.<br>
+	<strong>&lt;meta&gt;&lt;/meta&gt;</strong> sta etiqueta tiene muchas opciones y sirve para definir qué contenido existe en la página y a quién o a qué pertenece.<br>
+	<strong>&lt;link rel="" type="" href=""/&gt;</strong> esta etiqueta es un enlace (como una acceso directo del ordenador) de un archivo externo a la página con nuestra página, que le asigna un nombre.<br>
+	<small>No tiene segunda etiqueta para cerrar</small><br>
+	<small>Se usa sobre todo para establecer un tema en la página</small><br>
+	<strong>&lt;style&gt; { }&lt;/style&gt;</strong> establece el diseño de uno o varios elementos en una página. Entre los corchetes se sitúan definiciones como colores, posiciones, etc. Puede haber varias etiquetas style en cada página.<br><br>
+	Ejemplo de &lt;head&gt;:
 	</p>
+	<pre><code>&lt;title&gt;Ramón Hdez - Teoría&lt;/title&gt;<br>&lt;link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"&gt;<br><br>&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;<br>&lt;meta name="Ramón HDEZ - Creador" content="Copyright 2017 (c) Ramón Hernández García."&gt;<br>&lt;meta name="robots" content="NOODP"&gt;<br>&lt;meta name="description" content="Página personal de Ramón Hernández, estudiante madrileño."&gt;<br>&lt;meta name="keywords" content="Webpage, Ramón Hernández, rmnhg, kernel, linux, PC, Windows"&gt;<br>&lt;meta name="author" content="Ramón Hernández"&gt;<br>&lt;meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' /&gt;<br><br>&lt;link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" /&gt;<br>&lt;link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" /&gt;<br>&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" /&gt;<br><br>&lt;link href="assets/css/bootstrap.min.css" rel="stylesheet" /&gt;<br>&lt;link href="assets/css/material-kit.css" rel="stylesheet"/&gt;<br>&lt;link href="assets/css/demo.css" rel="stylesheet" /&gt;<br><br>&lt;style&gt;<br>h1 {color:red;}<br>p {color:blue;}<br>&lt;/style&gt;</code></pre>
 	<br>
 	<h2 id="body"><strong>Cuerpo. Códigos frecuentes.</strong></h1>
 	<br>Aquí os voy a dejar los códigos de elementos comunes y no tan comunes en una página dentro de &lt;body&gt;:
