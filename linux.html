@@ -4,7 +4,7 @@
 
 <HEAD>
 	<!--Website title-->
-	<title>Ramón Hdez - MINI WEB</title>
+	<title>Ramón Hdez - Cómo compilar un kernel de Linux</title>
 
 	<!--Webpage icon - Spain flag-->
 	<link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
@@ -13,7 +13,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="Ramón HDEZ - Creador" content="Copyright 2017 (c) Ramón Hernández García.">
 	<meta name="robots" content="NOODP">
-	<meta name="description" content="Página personal de Ramón Hernández, estudiante .">
+	<meta name="description" content="Página personal de Ramón Hernández, estudiante madrileño.">
 
 	<!--Theme starts here-->	
 		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -40,7 +40,7 @@
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-index">
-					<span class="sr-only">Toggle navigation</span>
+					<span class="sr-only">Abrir/cerrar navbar</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -60,7 +60,7 @@
 			<div class="collapse navbar-collapse" id="navigation-index">
 				<ul class="nav navbar-nav navbar-right">
 					<li>
-						<a href="/theory.html">Teoría
+						<a href="https://rmnhg.github.io">Página principal
 						</a>
 					</li>
 					<li>
@@ -97,19 +97,15 @@
 	<!--Floating settings button end-->
 	<!--Background image-->
 	<div class="wrapper">
-		<div class="header" style="background-image: url('assets/img/bg2.jpeg');">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2">
-						<div class="brand">
-							<h1>Web de Ramón Hernández</h1>
-							<h3>Aquí encontrarás un poco de todo</h3>
-							<!--These entries are only for making parallax effect work-->
-							<div id="sliderRegular" class="slider" style="visibility: hidden;"></div>
-							<div id="sliderDouble" class="slider slider-info" style="visibility: hidden;"></div>
-							<!--Finish here-->
-						</div>
-					</div>
+	<div class="header" style="background-image: url('assets/img/bg3.jpeg');">
+		<div class="container">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="brand">
+					<h1>Cómo compilar un kernel Linux</h1>
+					<!--These entries are only for making parallax effect work-->
+					<div id="sliderRegular" class="slider" style="visibility: hidden;"></div>
+					<div id="sliderDouble" class="slider slider-info" style="visibility: hidden;"></div>
+					<!--Finish here-->
 				</div>
 			</div>
 		</div>
@@ -118,31 +114,41 @@
 	<div class="main main-raised"> <!--Floating cloud-->
 	<div class="container"> <!--Make it more centered-->
 
-	
 	<!--I'll center some things-->
 	<center>
-	<!--Headers test (it reaches	<h5>)-->
-	<h1>Proyecto web informática SMP</h1>
-	<!--This is an image which redirects to my webpage-->
-	<a href="https://github.com/rmnhg" target="_blank">
-	<img alt="rmnhg's git photo" class="avatar width-full rounded-2" height="230" src="https://avatars0.githubusercontent.com/u/15710257?v=4&amp;s=460" width="230">
-	</a>
-	</center>
+	<!--Headers test (it reaches <h5>)-->
+	<h1><b>Cómo compilar un kernel Linux</b></h1> <!--Strong works as bold-->
+	<h2>Está por acabar 😬</h2>
 	<br>
+
+	<h4 style="font-size: xx-large;"><b>Índice</span></b></h4>
+	<!--This makes a list-->
+	<ul>
+	<li><a href="#linux">¿Qué es Linux?</a></li>
+	<!--
+	<li><a href="#body">Cuerpo. Códigos frecuentes.</a></li>
+	<li><a href="#more">Más cosillas: colores, parámetros, alineación de objetos, etc.</a></li>
+	-->
+	</ul>
 	<br>
-	<p><b>Mis posts actuales:</b></p>
-	<ol>	<!--This makes an unordered list with dots-->
-		<li><a href="https://rmnhg.github.io/theory.html" rel="noopener">Teoría de HTML</a></li>
-	</ol>
+
+	<h2 id="linux"><b>¿Qué es Linux?</b></h2>
+	Linux en un sistema operativo de código libre utilizado actualmente por millones de dispositivos en todo el planeta. Muchos sistemas operativos y sistemas están basados en los pilares de Linux, algunas de las distribuciones Linux más conocidas son Ubuntu, Debian u OpenSuse.<br>
+	Pero Linux no solo se limita a equipos fijos, también abarca los dispositivos móviles. Un ejemplo muy conocido actualmente es Android. Android es uno de los sistemas operativos más utlizados en los dispositivos portátiles y su proyecto AOSP (Android Open Source Project) consiste en compartir el código de su sistema operativo para que cada fabricante lo adapte a sus productos.
+Como Android se basa en Linux también utiliza su kernel con pequeñas modificaciones que lo hacen ejecutarse en procesadores menos potentes.<br>
+	Puedes encontrar este kernel en las particiones boot y aboot de los dispositivos (en el caso de procesadores Snapdragon)
+Aboot es la partición básica que ejecuta el código del bootloader que carga las funciones más básicas, dando paso después al boot.
+Boot es la partición que contiene el kernel de linux en formato zImage, así como las instrucciones de inicio de Android y el Device Tree, que es la información acerca de los sensores del dispositivo: la corriente que necesitan y cómo funcionan.
+	<div style="margin: 20px; margin-top: 5px;">
 	<br>
-	<br>
+  
 	<p><b>Links útiles:</b></p>
-	<ul>	<!--This makes an unordered list with dots-->
-		<li><a href="https://html-online.com/editor/" target="_blank" rel="noopener">Para probar código html</a></li>
-		<li><a href="http://www.makeuseof.com/tag/7-cool-html-effects-that-anyone-can-add-to-their-website-nb/" target="_blank" rel="noopener">Para poner efectos guays</a></li>
-		<li><a href="https://html-color-codes.info/codigos-de-colores-hexadecimales/" target="_blank" rel="noopener">Selector colores</a></li>
-		<li><a href="/theory.html">Teoría</a></li>
-		<li><a href="/testing.html">Laboratorio</a></li>
+	<ul><!--This makes a list-->
+	<li><a href="https://html-online.com/editor/" target="_blank" rel="noopener">Para probar código html</a></li>
+	<li><a href="http://www.makeuseof.com/tag/7-cool-html-effects-that-anyone-can-add-to-their-website-nb/" target="_blank" rel="noopener">Para poner efectos guays</a></li>
+	<li><a href="https://html-color-codes.info/codigos-de-colores-hexadecimales/" target="_blank" rel="noopener">Selector colores</a></li>
+	<li><a href="https://rmnhg.github.io/testing.html">Laboratorio</a></li>
+	<li><a href="https://rmnhg.github.io/">Página principal</a></li>
 	</ul>
 	</div>
 	</div>
