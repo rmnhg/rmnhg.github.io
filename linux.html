@@ -66,6 +66,10 @@
 						</a>
 					</li>
 					<li>
+						<a href="/theory.html">Teoría
+						</a>
+					</li>
+					<li>
 						<a href="/testing.html">Laboratorio
 						</a>
 					</li>
@@ -116,42 +120,59 @@
 	<div class="main main-raised"> <!--Floating cloud-->
 	<div class="container"> <!--Make it more centered-->
 
-	<!--I'll center some things-->
-	<center>
-	<!--Headers test (it reaches <h5>)-->
+	<div style="margin: 30px;">
 	<h1><b>Cómo compilar un kernel Linux</b></h1> <!--Strong works as bold-->
-	<h2>Está por acabar 😬</h2>
 	<br>
 
 	<h4 style="font-size: xx-large;"><b>Índice</span></b></h4>
 	<!--This makes a list-->
 	<ul>
-	<li><a href="#linux">¿Qué es Linux?</a></li>
-	<!--
-	<li><a href="#body">Cuerpo. Códigos frecuentes.</a></li>
-	<li><a href="#more">Más cosillas: colores, parámetros, alineación de objetos, etc.</a></li>
-	-->
+	<li><a href="#linux">Información básica. ¿Qué es Linux? ¿Qué es un kernel?</a></li>
 	</ul>
 	<br>
 
+	<center>
 	<h2 id="linux"><b>¿Qué es Linux?</b></h2>
-	Linux en un sistema operativo de código libre utilizado actualmente por millones de dispositivos en todo el planeta. Muchos sistemas operativos y sistemas están basados en los pilares de Linux, algunas de las distribuciones Linux más conocidas son Ubuntu, Debian u OpenSuse.<br>
-	Pero Linux no solo se limita a equipos fijos, también abarca los dispositivos móviles. Un ejemplo muy conocido actualmente es Android. Android es uno de los sistemas operativos más utlizados en los dispositivos portátiles y su proyecto AOSP (Android Open Source Project) consiste en compartir el código de su sistema operativo para que cada fabricante lo adapte a sus productos.
-Como Android se basa en Linux también utiliza su kernel con pequeñas modificaciones que lo hacen ejecutarse en procesadores menos potentes.<br>
-	Puedes encontrar este kernel en las particiones boot y aboot de los dispositivos (en el caso de procesadores Snapdragon)
-Aboot es la partición básica que ejecuta el código del bootloader que carga las funciones más básicas, dando paso después al boot.
-Boot es la partición que contiene el kernel de linux en formato zImage, así como las instrucciones de inicio de Android y el Device Tree, que es la información acerca de los sensores del dispositivo: la corriente que necesitan y cómo funcionan.
-	<div style="margin: 20px; margin-top: 5px;">
+	</center>
+	Linux en un sistema operativo de código libre utilizado actualmente por millones de dispositivos en todo el planeta. Muchos sistemas operativos y sistemas están basados en los pilares de Linux, algunas de las distribuciones Linux más conocidas son Ubuntu, Debian u OpenSuse. El núcleo de Linux se llama <b>kernel</b> y está programado principalmente en C. Este núcleo es el que hace que todo funcione como funciona y es la base de cualquier sistema operativo basado en Linux.<br>
 	<br>
-  
+	Pero Linux no solo se limita a equipos fijos, también abarca los dispositivos móviles. Un ejemplo muy conocido actualmente es Android. Android es uno de los sistemas operativos más utlizados en los dispositivos portátiles y su proyecto AOSP (Android Open Source Project) consiste en compartir libremente el código de su sistema operativo para que cada fabricante lo adapte a sus productos.
+Como Android se basa en Linux también utiliza su kernel con pequeñas modificaciones que lo hacen ejecutarse en procesadores menos potentes.<br>
+	Puedes encontrar este kernel en las particiones de boot y aboot de los dispositivos (en el caso de procesadores Snapdragon).<br>
+	<b>Aboot</b> es la partición básica que ejecuta el código del bootloader que carga las funciones más básicas, dando paso después al boot.<br>
+	<b>Boot</b> es la partición que contiene el kernel de linux en formato zImage, así como las instrucciones de inicio de Android y el Device Tree, que es la información acerca de los sensores del dispositivo: la corriente que necesitan y cómo funcionan.<br>
+	En esta página os voy a enseñar cómo compilar el kernel para la partición boot, ya que para compilar el bootloader tenemos otro proyecto más pequeño llamado Little Kernel.<br>
+	En la raíz del kernel tenemos muchas carpetas. Las que más utilizaremos serán las carpetas drivers y arch.<br>
+	En la carpeta de <b>drivers</b> podemos encontrar todo tipo de controladores de los cuales usaremos tan solo unos pocos. Ahí podremos añadir soporte a más dispositivos y mejorar o arreglar los que ya están creados.<br>
+	En la carpeta <b>arch</b> podemos gestionar la configuración del kernel antes de compilar (que nos permite activar y desactivar controladores o funciones), la configuración del procesador de destino y la información de todos los periféricos de entrada y salida que tendrá la plataforma de destino; esto es el Device Tree.<br>
+	<br>
+	Teniendo un archivo de configuración en arch/&lt;arquitectura_del_procesador_destino&gt;/configs llamado, por ejemplo, Android_defconfig podemos empezar a compilar.<br>
+	Para ello vamos a ejecutar este comando que copia ese archivo de configuración a la carpeta principal del kernel asignándole el nombre de ".config":<br>
+	<pre><code>make ARCH=<b>&lt;arquitectura_del_procesador_destino&gt;</b> Android_defconfig</code></pre>
+	Este es el archivo que el comando "make" leerá al empezar a compilar.<br>
+	<br>
+	Finalmente para compilar necesitaremos definir un <b>CROSS COMPILE</b>, que es un conjunto de archivos binarios que permiten al procesador de un PC compilar cualquier kernel para un procesador con otra arquitectura diferente (como arm o aarch64).<br>
+	En nuestro cross compile tenemos que meternos en la carpeta bin y copiar la ruta de los archivos con su prefijo. Por ejemplo si tengo:<br>
+	/media/ramon/Android/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androidkernel-ar<br>
+	Deberé poner "CROSS_COMPILE=/media/ramon/Android/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androidkernel-". El comando quedaría así:
+	<pre><code>make ARCH=<b>&lt;arquitectura_del_procesador_destino&gt;</b> CROSS_COMPILE=/media/ramon/Android/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androidkernel-</b></code></pre>
+	Y al ejecutarlo comenzaría el proceso de compilación del kernel.<br>
+	<small><b>Nota:</b> para acelerar el proceso se puede añadir el parámetro <b>-j&lt;número_de_núcleos_del_procesador+1&gt;</b> que utilizará el máximo potencial del procesador.</small><br>
+	<br>
+	Al final del proceso tendrás un archivo llamado zImage en arch/&lt;arquitectura_del_procesador_destino&gt;/boot que será el kernel en formato binario. Ese fichero se debe incluir en un boot.img y habrá que instalar ese boot.img para probar el nuevo kernel.
+
+	<div style="margin-top: 50px;">
 	<p><b>Links útiles:</b></p>
 	<ul><!--This makes a list-->
 	<li><a href="https://html-online.com/editor/" target="_blank" rel="noopener">Para probar código html</a></li>
 	<li><a href="http://www.makeuseof.com/tag/7-cool-html-effects-that-anyone-can-add-to-their-website-nb/" target="_blank" rel="noopener">Para poner efectos guays</a></li>
 	<li><a href="https://html-color-codes.info/codigos-de-colores-hexadecimales/" target="_blank" rel="noopener">Selector colores</a></li>
+	<li><a href="https://rmnhg.github.io/theory.html">Teoría</a></li>
 	<li><a href="https://rmnhg.github.io/testing.html">Laboratorio</a></li>
 	<li><a href="https://rmnhg.github.io/">Página principal</a></li>
 	</ul>
+	</div>
+	</div>
 	</div>
 	</div>
 </BODY>
