@@ -216,5 +216,15 @@ Como Android se basa en Linux también utiliza su kernel con pequeñas modificac
 
 		});
 	</script>
+	<script>
+		function aud_play_pause() {
+			var myAudio = document.getElementById("musica_de_fondo");
+			if (myAudio.paused) {
+				myAudio.play();
+			} else {
+				myAudio.pause();
+			}
+		}
+	</script>
 	
 </html>
