@@ -92,7 +92,17 @@
                 <i class="fa fa-cog fa-2x"> </i>
                 </a>
                 <ul class="dropdown-menu">
-                    <li class="header-title">Ajustes</li>
+					<li>
+						<h4><b>Ajustes:</b></h4>
+						<h5>Música de fondo 🎵:</h5>
+						<div class="togglebutton">
+				            <label>
+							<audio id="musica_de_fondo" src="http://195.10.10.221/cope/megastar.mp3?GKID=f9078c22ce4811e787b500163ea2c744" type="audio/mp4"></audio>
+				               	<input type="checkbox" onclick="aud_play_pause()">
+								Encender
+				            </label>
+				            </div>
+					</li>
                 </ul>
             </div>
         </div>
@@ -177,6 +187,16 @@ function TrexRunnerBot(){function n(){if(Runner&&Runner().horizon.obstacles[0]){
 			}
 
 		});
+	</script>
+	<script>
+		function aud_play_pause() {
+			var myAudio = document.getElementById("musica_de_fondo");
+			if (myAudio.paused) {
+				myAudio.play();
+			} else {
+				myAudio.pause();
+			}
+		}
 	</script>
 	
 </html>
