@@ -105,7 +105,13 @@
 				               	<input type="checkbox" onclick="aud_play_pause()">
 								Encender
 				            </label>
-				            </div>
+				        </div>
+						<div class="togglebutton">
+						<label>
+						<center>Volumen</center>
+							<input id="vol-control" type="range" min="0" max="100" step="1" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)"></input>
+						</label>
+						</div>
 					</li>
                 </ul>
             </div>
@@ -185,6 +191,43 @@ Como Android se basa en Linux también utiliza su kernel con pequeñas modificac
 	</div>
 	</div>
 	</div>
+	
+	<footer class="footer">
+	    <div class="container">
+	        <nav class="pull-left">
+	            <ul>
+					<li>
+						<a href="https://rmnhg.github.io">
+							Página Principal
+						</a>
+					</li>
+					<li>
+						<a href="https://rmnhg.github.io/theory">
+						   Teoría
+						</a>
+					</li>
+					<li>
+						<a href="https://rmnhg.github.io/testing">
+						   Laboratorio
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/rmnhg/rmnhg.github.io">
+						   Código fuente
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/rmnhg">
+							Mi GitHub
+						</a>
+					</li>
+	            </ul>
+	        </nav>
+	        <div class="copyright pull-right">
+	            © 2017, creado por Ramón Hernández como un proyecto para informática.
+	        </div>
+	    </div>
+	</footer>
 </BODY>
 
 	<!--	 Core JS Files for Navigation Bar    -->
@@ -224,6 +267,15 @@ Como Android se basa en Linux también utiliza su kernel con pequeñas modificac
 			} else {
 				myAudio.pause();
 			}
+		}
+	</script>
+	<script>
+		function SetVolume(val)
+		{
+			var player = document.getElementById('musica_de_fondo');
+			console.log('Before: ' + player.volume);
+			player.volume = val / 100;
+			console.log('After: ' + player.volume);
 		}
 	</script>
 	

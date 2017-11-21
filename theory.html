@@ -101,7 +101,13 @@
 				               	<input type="checkbox" onclick="aud_play_pause()">
 								Encender
 				            </label>
-				            </div>
+				        </div>
+						<div class="togglebutton">
+						<label>
+						<center>Volumen</center>
+							<input id="vol-control" type="range" min="0" max="100" step="1" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)"></input>
+						</label>
+						</div>
 					</li>
                 </ul>
             </div>
@@ -198,7 +204,7 @@
 		<br>
 		<b>Quedaría así:</b>
 		<br>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/zLVfZ1yuwAk" frameborder="0" allowfullscreen></iframe>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/ADziCf-2EtU" frameborder="0" allowfullscreen></iframe>
 		<br>
 		<b>Nota:</b> los atributos de <b>frameborder="0"</b> y <b>allowfullscreen</b> hacen que no aparezca el marco de este subnavegador y que se pueda poner en pantalla completa.
 		<br>
@@ -256,10 +262,22 @@
 		Ejemplo: <pre><code>&lt;ins&gt;Esto será un texto subrayado&lt;/ins&gt</code></pre><br>
 		<ins>Esto será un texto subrayado</ins><br>
 		</div>
-	<b>&lt;small&gt;&lt;/small&gt;</b> sirve para introducir aclaraciones, hace el texto un poco más pequeño<br>
+	<b>&lt;small&gt;&lt;/small&gt;</b> sirve para introducir aclaraciones, hace el texto un poco más pequeño.<br>
 		<div style="margin: 10px;">
-		Ejemplo: <pre><code>&lt;b&gt;Esto es un texto en pequeño&lt;/b&gt</code></pre><br>
+		Ejemplo: <pre><code>&lt;small&gt;Esto es un texto en pequeño&lt;/small&gt</code></pre><br>
 		<small>Esto es un texto en pequeño</small><br>
+		</div>
+	<b>&lt;p&gt;&lt;/p&gt;</b> sirve para crear párrafos en la página. No conservan los saltos de línea.<br>
+		<div style="margin: 10px;">
+		Ejemplo: <pre><code>&lt;p&gt;Esto es un párrafo<br>con un salto de línea&lt;/p&gt</code></pre><br>
+		<p>Esto es un párrafo
+con un salto de línea</p><br>
+		</div>
+	<b>&lt;pre&gt;&lt;/pre&gt;</b> sirve para insertar texto preformateado en la página. Sí conserva los saltos de línea.<br>
+		<div style="margin: 10px;">
+		Ejemplo: <pre><code>&lt;pre&gt;Esto es un texto preformateado<br>con un salto de línea&lt;/pre&gt</code></pre><br>
+		<pre>Esto es un texto preformateado
+con un salto de línea</pre><br>
 		</div>
 		<br>
 		<br>
@@ -307,6 +325,38 @@
 	</div>
 	</div>
 	</div>
+	
+	<footer class="footer">
+	    <div class="container">
+	        <nav class="pull-left">
+	            <ul>
+					<li>
+						<a href="https://rmnhg.github.io">
+							Página Principal
+						</a>
+					</li>
+					<li>
+						<a href="https://rmnhg.github.io/testing">
+						   Laboratorio
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/rmnhg/rmnhg.github.io">
+						   Código fuente
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/rmnhg">
+							Mi GitHub
+						</a>
+					</li>
+	            </ul>
+	        </nav>
+	        <div class="copyright pull-right">
+	            © 2017, creado por Ramón Hernández como un proyecto para informática.
+	        </div>
+	    </div>
+	</footer>
 </BODY>
 
 	<!--	 Core JS Files for Navigation Bar    -->
@@ -346,6 +396,15 @@
 			} else {
 				myAudio.pause();
 			}
+		}
+	</script>
+	<script>
+		function SetVolume(val)
+		{
+			var player = document.getElementById('musica_de_fondo');
+			console.log('Before: ' + player.volume);
+			player.volume = val / 100;
+			console.log('After: ' + player.volume);
 		}
 	</script>
 	
