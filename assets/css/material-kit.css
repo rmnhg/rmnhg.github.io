@@ -1,19 +1,19 @@
 /*!
-    
+
  =========================================================
  * Material Kit - v1.1.1.0
  =========================================================
- 
+
  * Product Page: http://www.creative-tim.com/product/material-kit
  * Copyright 2017 Creative Tim (http://www.creative-tim.com)
  * Licensed under MIT (https://github.com/timcreative/material-kit/blob/master/LICENSE.md)
- 
+
  =========================================================
- 
+
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- 
+
  */
- 
+
 /* ANIMATION */
 /* SHADOWS */
 /* Shadows (from mdl http://www.getmdl.io/) */
@@ -1352,7 +1352,7 @@ output {
         border-top: 16px solid rgba(0,0,0,0);
         right: -16px;
     }
-    
+
     .fixed-plugin .dropdown-menu:after{
         border-bottom: 16px solid rgba(0, 0, 0, 0);
         border-left: 16px solid #FFFFFF;
@@ -3674,11 +3674,11 @@ h2.title {
 .index-page .section-basic {
   padding-top: 15px;
 }
-.index-page .header-filter:after {
+.index-page .header-filter:after {/* This is the purple color. If it is disabled, filter is black
   background: rgba(101, 47, 142, 0.64);
   background: linear-gradient(45deg, rgba(101, 47, 142, 0.88) 0%, rgba(125, 46, 185, 0.45) 100%);
   background: -moz-linear-gradient(135deg, rgba(101, 47, 142, 0.88) 0%, rgba(125, 46, 185, 0.45) 100%);
-  background: -webkit-linear-gradient(135deg, rgba(101, 47, 142, 0.88) 0%, rgba(125, 46, 185, 0.45) 100%);
+  background: -webkit-linear-gradient(135deg, rgba(101, 47, 142, 0.88) 0%, rgba(125, 46, 185, 0.45) 100%);*/
 }
 
 .landing-page .header {
@@ -3719,10 +3719,16 @@ h2.title {
     border-radius: 0 0 6px 6px;
 }
 .fixed-plugin .dropdown-menu{
-    right: 80px;
+    right: 75px;
+    top: 0px;
     left: auto;
-    width: 440px;
+    width: auto; /*In auto I will not have problems*/
 }
+
+.fixed-plugin li{
+    left: 5px;
+}
+
 .fixed-plugin .dropdown-menu:after, .fixed-plugin .dropdown-menu:before{
     right: 10px;
     margin-left: auto;
@@ -3742,7 +3748,7 @@ h2.title {
     float: left;
 }
 
-.fixed-plugin .active a, 
+.fixed-plugin .active a,
 .fixed-plugin a:hover{
     border-color: #00bbff;
 }
@@ -3812,7 +3818,7 @@ h2.title {
   font-weight: 600;
   text-transform: uppercase;
   padding: 0 15px;
-} 
+}
 
 .fixed-plugin .adjustments-line p{
     float: left;
@@ -3841,7 +3847,7 @@ h2.title {
       border-radius: 10px;
       background-color: #FFF;
       padding-left: 0;
-      padding-right: 0; 
+      padding-right: 0;
       opacity: 1;
       cursor: pointer;
 }
@@ -3850,7 +3856,7 @@ h2.title {
 .fixed-plugin .dropdown-menu > li > a.switch-trigger:focus{
     background-color: transparent;
 }
-.fixed-plugin .dropdown-menu > .active > a:not(.switch-trigger), 
+.fixed-plugin .dropdown-menu > .active > a:not(.switch-trigger),
 .fixed-plugin .dropdown-menu > .active > a:not(.switch-trigger){
     border-color: #00bbff;
     background-color: #FFFFFF;
@@ -3869,8 +3875,8 @@ h2.title {
   border-color: rgb(44, 168, 255);
 }
 
-.fixed-plugin .dropdown-menu > li.active > a p, 
-.fixed-plugin .dropdown-menu > li > a p, 
+.fixed-plugin .dropdown-menu > li.active > a p,
+.fixed-plugin .dropdown-menu > li > a p,
 .fixed-plugin .dropdown-menu > li.active > a:focus p{
     color: #777777;
 }
