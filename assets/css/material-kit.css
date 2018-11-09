@@ -1340,8 +1340,8 @@ output {
         content: "";
         display: inline-block;
         position: absolute;
-        top: 50px;
-        width: 16px;
+        top: 0px;
+        width: auto;
         transform: translateY(-50%);
         -webkit-transform: translateY(-50%);
         -moz-transform: translateY(-50%);
@@ -2069,7 +2069,7 @@ legend {
   }
   .fixed-plugin .dropdown-menu{
     top: 0;
-    width: 220px;
+    width: auto;
   }
   .navbar .navbar-nav .navbar-text {
     color: inherit;
