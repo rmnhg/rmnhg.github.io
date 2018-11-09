@@ -17,7 +17,7 @@
 	<meta name="author" content="Ramón Hernández">
 	<meta name="keywords" content="Linux; Android; Ramón Hernández; web; Material Design">
 
-	<!--Theme starts here-->	
+	<!--Theme starts here-->
 		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
 		<!--	 Fonts and icons	 -->
@@ -91,31 +91,31 @@
 	<!-- End Navbar -->
 	<!--Floating settings button -->
 	<div class="fixed-plugin">
-            <div class="dropdown">
-                <a href="#" data-toggle="dropdown" aria-expanded="false">
-                <i class="fa fa-cog fa-2x"> </i>
-                </a>
-                <ul class="dropdown-menu">
-					<li>
-						<h4><b>Ajustes:</b></h4>
-						<h5>Música de fondo 🎵:</h5>
-						<div class="togglebutton">
-				            <label>
-							<audio id="musica_de_fondo" src="http://195.10.10.225/cope/megastar.mp3?GKID=3f6301e20fee11e8adb900163e914f69" type="audio/mp4"></audio>
-				               	<input type="checkbox" onclick="aud_play_pause()">
-								Encender
-				            </label>
-				        </div>
-						<div class="togglebutton">
+		<div class="dropdown">
+			<a href="#" data-toggle="dropdown" aria-expanded="false">
+				<i class="fa fa-cog fa-2x"></i>
+		  </a>
+			<ul class="dropdown-menu">
+				<li>
+					<h4><b>Ajustes:</b></h4>
+					<h5>Música de fondo 🎵:</h5>
+					<div class="togglebutton">
 						<label>
-						<center>Volumen</center>
-							<input id="vol-control" type="range" min="0" max="100" step="1" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)"></input>
-						</label>
+							<audio id="musica_de_fondo" src="http://195.10.10.225/cope/megastar.mp3?GKID=3f6301e20fee11e8adb900163e914f69" type="audio/mp4"></audio>
+							<input type="checkbox" onclick="aud_play_pause()">
+							Encender
+				    </label>
+				    </div>
+						<div class="togglebutton">
+							<label>
+								<center>Volumen</center>
+								<input id="vol-control" type="range" min="0" max="100" step="1" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)"></input>
+							</label>
 						</div>
 					</li>
-                </ul>
-            </div>
-        </div>
+      </ul>
+    </div>
+  </div>
 	<!--Floating settings button end-->
 	<!--Background image-->
 	<div class="wrapper">
@@ -191,7 +191,7 @@ Como Android se basa en Linux también utiliza su kernel con pequeñas modificac
 	</div>
 	</div>
 	</div>
-	
+
 	<footer class="footer">
 	    <div class="container">
 	        <nav class="pull-left">
@@ -261,22 +261,23 @@ Como Android se basa en Linux también utiliza su kernel con pequeñas modificac
 	</script>
 	<script>
 		function aud_play_pause() {
-			var myAudio = document.getElementById("musica_de_fondo");
-			if (myAudio.paused) {
-				myAudio.play();
+			var player = document.getElementById('musica_de_fondo');
+			if (player.paused) {
+				player.play();
+				console.log('Audio is now playing');
 			} else {
-				myAudio.pause();
+				player.pause();
+				console.log('Audio is now paused');
 			}
 		}
-	</script>
-	<script>
+
 		function SetVolume(val)
 		{
 			var player = document.getElementById('musica_de_fondo');
-			console.log('Before: ' + player.volume);
+			console.log('Volume before: ' + player.volume);
 			player.volume = val / 100;
-			console.log('After: ' + player.volume);
+			console.log('Volume now: ' + player.volume);
 		}
 	</script>
-	
+
 </html>

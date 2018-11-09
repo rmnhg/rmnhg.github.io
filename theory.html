@@ -17,7 +17,7 @@
 	<meta name="author" content="Ramón Hernández">
 	<meta name="keywords" content="Linux; Android; Ramón Hernández; web; Material Design">
 
-	<!--Theme starts here-->	
+	<!--Theme starts here-->
 		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
 		<!--	 Fonts and icons	 -->
@@ -87,31 +87,31 @@
 	<!-- End Navbar -->
 	<!--Floating settings button -->
 	<div class="fixed-plugin">
-            <div class="dropdown">
-                <a href="#" data-toggle="dropdown" aria-expanded="false">
-                <i class="fa fa-cog fa-2x"> </i>
-                </a>
-                <ul class="dropdown-menu">
-					<li>
-						<h4><b>Ajustes:</b></h4>
-						<h5>Música de fondo 🎵:</h5>
-						<div class="togglebutton">
-				            <label>
-							<audio id="musica_de_fondo" src="http://195.10.10.225/cope/megastar.mp3?GKID=3f6301e20fee11e8adb900163e914f69" type="audio/mp4"></audio>
-				               	<input type="checkbox" onclick="aud_play_pause()">
-								Encender
-				            </label>
-				        </div>
-						<div class="togglebutton">
+		<div class="dropdown">
+			<a href="#" data-toggle="dropdown" aria-expanded="false">
+				<i class="fa fa-cog fa-2x"></i>
+		  </a>
+			<ul class="dropdown-menu">
+				<li>
+					<h4><b>Ajustes:</b></h4>
+					<h5>Música de fondo 🎵:</h5>
+					<div class="togglebutton">
 						<label>
-						<center>Volumen</center>
-							<input id="vol-control" type="range" min="0" max="100" step="1" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)"></input>
-						</label>
+							<audio id="musica_de_fondo" src="http://195.10.10.225/cope/megastar.mp3?GKID=3f6301e20fee11e8adb900163e914f69" type="audio/mp4"></audio>
+							<input type="checkbox" onclick="aud_play_pause()">
+							Encender
+				    </label>
+				    </div>
+						<div class="togglebutton">
+							<label>
+								<center>Volumen</center>
+								<input id="vol-control" type="range" min="0" max="100" step="1" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)"></input>
+							</label>
 						</div>
 					</li>
-                </ul>
-            </div>
-        </div>
+      </ul>
+    </div>
+  </div>
 	<!--Floating settings button end-->
 	<!--Background image-->
 	<div class="wrapper">
@@ -130,202 +130,202 @@
 	</div>
 
 	<div class="main main-raised"> <!--Floating cloud-->
-	<div class="container"> <!--Make it more centered-->
-	<div style="margin: 30px;">
-	<!--I'll center some things-->
-	<center>
-	<!--Headers test (it reaches <h5>)-->
-	<h1><b>Teoría</b></h1> <!--Strong works as bold-->
-	</center>
-  Aquí voy a ir apuntando lo que aprenda de HTML para probar los cuadros de código.
-	<br>
+		<div class="container"> <!--Make it more centered-->
+			<div style="margin: 30px;">
+				<!--I'll center some things-->
+				<center>
+				<!--Headers test (it reaches <h5>)-->
+				<h1><b>Teoría</b></h1> <!--Strong works as bold-->
+				</center>
+			  Aquí voy a ir apuntando lo que aprenda de HTML para probar los cuadros de código.
+				<br>
 
-	<h4 style="font-size: xx-large;"><b>Índice</span></b></h4>
-	<!--This makes a list-->
-	<ul>
-	<li><a href="#page_beginning">Cómo empezar la página. Nociones básicas.</a></li>
-	<li><a href="#body">Cuerpo. Códigos frecuentes.</a></li>
-	<li><a href="#more">Más cosillas: colores, parámetros, alineación de objetos, etc.</a></li>
-	</ul>
-	<br>
+				<h4 style="font-size: xx-large;"><b>Índice</span></b></h4>
+				<!--This makes a list-->
+				<ul>
+				<li><a href="#page_beginning">Cómo empezar la página. Nociones básicas.</a></li>
+				<li><a href="#body">Cuerpo. Códigos frecuentes.</a></li>
+				<li><a href="#more">Más cosillas: colores, parámetros, alineación de objetos, etc.</a></li>
+				</ul>
+				<br>
 
-	<h2 id="page_beginning"><b>Cómo empezar la página.</b></h2>
-  Este es el código básico para que un archivo HTML sea leído correctamente por un navegador:
-	<div style="margin: 20px; margin-top: 5px;">
-	<!--Code block-->
-	<pre><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+				<h2 id="page_beginning"><b>Cómo empezar la página.</b></h2>
+			  Este es el código básico para que un archivo HTML sea leído correctamente por un navegador:
+				<div style="margin: 20px; margin-top: 5px;">
+				<!--Code block-->
+				<pre><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
+				</div>
+				<p> <!--I have to use "&lt;" for "<" and "&gt;" for ">"-->
+				<b>&lt;!DOCTYPE html&gt;</b> define la versión de HTML en la que está escrita la página. En este caso estamos usando la versión 5 pero se podría definir otra más antigua.<br>
+				<b>&lt;html&gt;&lt;/html&gt;</b> esto le dice al navegador que la página está escrita en HTML. Siempre va después de &lt;!DOCTYPE&gt;.<br>
+				<b>&lt;head&gt;&lt;/head&gt;</b> esto es la cabezera de la página. Aquí no va el contenido, aquí se establecen parámetros como el título de la página, el icono, las metaetiquetas, scripts, etc.<br>
+				<b>&lt;body&gt;&lt;/body&gt;</b> aquí va todo el contenido normal de la página. Por ejemplo los textos, las imágenes, los vídeos, los botones, etc.<br>
+			   Estos elementos se llaman tags o etiquetas. Todos tienen una etiqueta de entrada y otra de salida que empieza por "<b>/</b>" exceptuando la etiqueta <b>&lt;br&gt;</b>, que puede estar sola.
+				</p>
+				<br>
+				<h3><b>Etiquetas de la cabezera de la página "&lt;head&gt;"</b></h3>
+				<p>La etiqueta <b>head</b> sirve para definir la estructura principal de la página. Dentro de esta etiqueta puedes encontrar otras como:<br>
+				<b>&lt;title&gt;&lt;/title&gt;</b> como dice su nombre, se encarga de darle un título a la página que aparecerá en la pestaña del navegador.<br>
+				<b>&lt;meta&gt;&lt;/meta&gt;</b> sta etiqueta tiene muchas opciones y sirve para definir qué contenido existe en la página y a quién o a qué pertenece.<br>
+				<b>&lt;link rel="" type="" href=""/&gt;</b> esta etiqueta es un enlace (como una acceso directo del ordenador) de un archivo externo a la página con nuestra página, que le asigna un nombre.<br>
+				<small>No tiene segunda etiqueta para cerrar</small><br>
+				<small>Se usa sobre todo para establecer un tema en la página</small><br>
+				<b>&lt;style&gt; { }&lt;/style&gt;</b> establece el diseño de uno o varios elementos en una página. Entre los corchetes se sitúan definiciones como colores, posiciones, etc. Puede haber varias etiquetas style en cada página.<br><br>
+				Ejemplo de &lt;head&gt;:
+				</p>
+				<pre><code>&lt;title&gt;Ramón Hdez - Teoría&lt;/title&gt;<br>&lt;link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"&gt;<br><br>&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;<br>&lt;meta name="Ramón HDEZ - Creador" content="Copyright 2018 (c) Ramón Hernández García."&gt;<br>&lt;meta name="robots" content="NOODP"&gt;<br>&lt;meta name="description" content="Página personal de Ramón Hernández, estudiante madrileño."&gt;<br>&lt;meta name="keywords" content="Webpage, Ramón Hernández, rmnhg, kernel, linux, PC, Windows"&gt;<br>&lt;meta name="author" content="Ramón Hernández"&gt;<br>&lt;meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' /&gt;<br><br>&lt;link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" /&gt;<br>&lt;link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" /&gt;<br>&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" /&gt;<br><br>&lt;link href="assets/css/bootstrap.min.css" rel="stylesheet" /&gt;<br>&lt;link href="assets/css/material-kit.css" rel="stylesheet"/&gt;<br>&lt;link href="assets/css/demo.css" rel="stylesheet" /&gt;<br><br>&lt;style&gt;<br>h1 {color:red;}<br>p {color:blue;}<br>&lt;/style&gt;</code></pre>
+				<br>
+				<h2 id="body"><b>Cuerpo. Códigos frecuentes.</b></h1>
+				<br>Aquí os voy a dejar los códigos de elementos comunes y no tan comunes en una página dentro de &lt;body&gt;:
+				<ul><!--This makes a list-->
+					<li><a href="#images">Imágenes</a></li>
+					<li><a href="#videos">Vídeos</a></li>
+					<li><a href="#music">Musica</a></li>
+					<li><a href="#javascript">Javascripts</a></li>
+				</ul>
+				<h3 id="images"><b>Cómo poner imágenes</b></h3>
+				Si queremos usar imágenes en nuestra página web debemos usar la etiqueta de <b>&lt;img width="" height=""&gt;&lt;/img&gt;</b> con el atributo src="&lt;link&gt;", width="&lt;ancho_de_la_imagen&gt; y height="&lt;altura_de_la_imagen&gt;".<br>
+				Por ejemplo si quiero insertar <a href="http://c1.staticflickr.com/4/3128/2436481628_881688fa7f.jpg" target="_blank">esta imagen</a> deberé escribir:<br>
+				<pre><code>&lt;img src="http://c1.staticflickr.com/4/3128/2436481628_881688fa7f.jpg"&gt;&lt;/img&gt;</code></pre>
+				<br>
+				<b>Quedaría así:</b>
+				<br>
+				<img src="http://c1.staticflickr.com/4/3128/2436481628_881688fa7f.jpg"></img><br>
+				<br>
+				Y como no he añadido ni width ni height la imagen se muestra en su tamaño original.
+				<br>
+				<br>
+				<h3 id="videos"><b>Cómo poner vídeos</b></h3>
+				Para poner vídeos en nuestra página tenemos dos opciones:<br>
+				<ol>
+					<li>Usar la etiqueta <b>&lt;iframe width="" height=""&gt;&lt;/iframe&gt;</b> : Esta etiqueta lo que hace es abrir una página web dentro de otra. Es útil para abrir una página con un reproductor de vídeo, como es el caso de los vídeo embed de YouTube con links del formato de "https://www.youtube.com/embed/12345"<br>
+					Por ejemplo si quiero insertar <a href="https://www.youtube.com/watch?v=ADziCf-2EtU" target="_blank">este vídeo de AuronPlay</a> deberé escribir:<br>
+					<pre><code>&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/ADziCf-2EtU" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+					<br>
+					<b>Quedaría así:</b>
+					<br>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/ADziCf-2EtU" frameborder="0" allowfullscreen></iframe>
+					<br>
+					<b>Nota:</b> los atributos de <b>frameborder="0"</b> y <b>allowfullscreen</b> hacen que no aparezca el marco de este subnavegador y que se pueda poner en pantalla completa.
+					<br>
+					<br>
+					<li>Usar la etiqueta <b>&lt;video width="" height="" controls&gt;&lt;/video&gt;</b> : Esta etiqueta lo que hace es abrir el reproductor nativo del navegador para reproducir vídeos directamente de una dirección determinada. Para establecer el vídeo necesito poner el atributo controls para activar los controles del reproductor y meter dentro otra etiqueta: <b>&lt;source&gt;</b> con los atributos src="&lt;dirección_del_vídeo&gt;" y type="&lt;formato_del_vídeo&gt;".<br>
+					Por ejemplo si quiero insertar <a href="assets/video/SampleVideo_1280x720_2mb" target="_blank">este vídeo</a> deberé escribir:<br>
+					<pre><code>&lt;video width="560" height="315" controls&gt;&lt;source src="assets/video/SampleVideo_1280x720_2mb.mp4" type="video/mp4"&gt;&lt;/video&gt;</code></pre>
+					<br>
+					<b>Quedaría así:</b>
+					<br>
+					<video width="560" height="315" controls><source src="assets/video/SampleVideo_1280x720_2mb.mp4" type="video/mp4">Siento lo ocurrido, pero tu navegador no acepta este formato de vídeo</video>
+				</ol>
+				<br>
+				<br>
+				<h3 id="music"><b>Cómo poner música</b></h3>
+				Si queremos poner música en nuestra página web debemos usar la etiqueta <b>&lt;audio&gt;&lt;/audio&gt;</b> con el atributo controls para activar los controles del reproductor y con otra etiqueta dentro: <b>&lt;source&gt;</b> con los atributos src="&lt;dirección_del_audio&gt;" y type="&lt;formato_del_audio&gt;".<br>
+				Por ejemplo si quiero insertar <a href="assets/audio/horse.mp3" target="_blank">este sonido de caballo</a> deberé escribir:<br>
+				<pre><code>&lt;audio controls&gt;&lt;source src="assets/audio/horse.mp3" type="audio/mpeg"&gt;&lt;/audio&gt;</code></pre>
+				<br>
+				<b>Quedaría así:</b>
+				<br>
+				<audio controls><source src="assets/audio/horse.mp3" type="audio/mpeg">Siento lo ocurrido, pero tu navegador no acepta este formato de audio.</audio><br>
+				<br>
+				<br>
+				<h3 id="javascript"><b>Cómo poner javascript</b></h3>
+				<br>
+				<br>
+				<h2 id="more"><b>Más cosillas: colores, tipos de texto, parametros, alineación, etc.</b></h1>
+				<br>Más cosas:
+				<ul><!--This makes a list-->
+					<li><a href="#textformats">Formatos de texto</a></li>
+					<li><a href="#table">Tabla</a></li>
+					<li><a href="#id">ID</a></li>
+					<li><a href="#alt">alt</a></li>
+				</ul>
+				<h3 id="textformats"><b>Formatos de texto</b></h3>
+				Existen etiquetas  que nos permiten customizar los textos. Nos podemos encontrar algunas como:<br>
+				<b>&lt;b&gt;&lt;/b&gt;</b> o <b>&lt;strong&gt;&lt;/strong&gt;</b> hace que el texto salga en negrita.<br>
+				<div style="margin: 10px;">
+					Ejemplo: <pre><code>&lt;b&gt;Esto será un texto en negrita&lt;/b&gt;</code></pre><br>
+					<b>Esto será un texto en negrita</b><br>
+				</div>
+				<b>&lt;i&gt;&lt;/i&gt;</b> hace que el texto salga en fuente itálica, en cursiva.<br>
+				<div style="margin: 10px;">
+					Ejemplo: <pre><code>&lt;i&gt;Esto será un texto en cursiva&lt;/i&gt;</code></pre><br>
+					<i>Esto será un texto en cursiva</i><br>
+				</div>
+				<b>&lt;mark&gt;&lt;/mark&gt;</b> subraya el texto en amarillo.<br>
+				<div style="margin: 10px;">
+					Ejemplo: <pre><code>&lt;mark&gt;Esto será un texto subrayado en amarillo&lt;/mark&gt;</code></pre><br>
+					<mark>Esto será un texto subrayado en amarillo</mark><br>
+				</div>
+				<b>&lt;ins&gt;&lt;/ins&gt;</b> subraya el texto por debajo.<br>
+				<div style="margin: 10px;">
+					Ejemplo: <pre><code>&lt;ins&gt;Esto será un texto subrayado&lt;/ins&gt;</code></pre><br>
+					<ins>Esto será un texto subrayado</ins><br>
+				</div>
+				<b>&lt;small&gt;&lt;/small&gt;</b> sirve para introducir aclaraciones, hace el texto un poco más pequeño.<br>
+				<div style="margin: 10px;">
+					Ejemplo: <pre><code>&lt;small&gt;Esto es un texto en pequeño&lt;/small&gt;</code></pre><br>
+					<small>Esto es un texto en pequeño</small><br>
+				</div>
+				<b>&lt;p&gt;&lt;/p&gt;</b> sirve para crear párrafos en la página. No conservan los saltos de línea.<br>
+				<div style="margin: 10px;">
+					Ejemplo: <pre><code>&lt;p&gt;Esto es un párrafo<br>con un salto de línea&lt;/p&gt;</code></pre><br>
+					<p>Esto es un párrafo
+			con un salto de línea</p><br>
+				</div>
+				<b>&lt;pre&gt;&lt;/pre&gt;</b> sirve para insertar texto preformateado en la página. Sí conserva los saltos de línea.<br>
+				<div style="margin: 10px;">
+					Ejemplo: <pre><code>&lt;pre&gt;Esto es un texto preformateado<br>con un salto de línea&lt;/pre&gt;</code></pre><br>
+					<pre>Esto es un texto preformateado
+			con un salto de línea</pre><br>
+					</div>
+				<br>
+				<br>
+				<h3 id="table"><b>Tabla</b></h3>
+				Para crear una tabla deberemos usar la etiqueta <b>&lt;table&gt;&lt;/table&gt;</b> con varias subetiquetas:<br>
+				<b>&lt;tr&gt;&lt;/tr&gt;</b> crea una fila horizontal y, a su vez, contiene más etiquetas:<br>
+					<ol>
+						<li><b>&lt;th&gt;&lt;/th&gt;</b> que sirve para crear la primera fila que contiene los nombres de los elementos de cada columna.</li>
+						<li><b>&lt;td&gt;&lt;/td&gt;</b> que sirve para añadir las siguientes filas, todas comunes.</li>
+					</ol>
+				<b>&lt;caption&gt;&lt;/caption&gt;</b> que crea un título para la tabla. Esto es opcional y también va dentro de <b>&lt;table&gt;&lt;/table&gt;</b><br>
+				Por ejemplo, si queremos introducir una tabla con datos de personas podemos escribir:<br>
+				<pre><code>&lt;table style="width:50%;border:1px;padding-left:40px;"&gt;<br>	&lt;caption> Datos de personas&lt;/caption><br>	&lt;tr&gt;<br>		&lt;th style="border:1px solid black;padding:10px"&gt;Nombre&lt;/th&gt;<br>		&lt;th style="border:1px solid black;padding:10px" colspan="2"&gt;Apellidos&lt;/th&gt;<br>		&lt;th style="border:1px solid black;padding:10px"&gt;Edad&lt;/th&gt;<br>	&lt;/tr&gt;<br>	&lt;tr&gt;<br>		&lt;td style="border:1px solid black;padding:10px"&gt;Ramón&lt;/td&gt;<br>		&lt;td style="border:1px solid black;padding:10px"&gt;Fernández&lt;/td&gt;<br>		&lt;td style="border:1px solid black;padding:10px"&gt;Romero&lt;/td&gt;<br>		&lt;td style="border:1px solid black;padding:10px"&gt;19&lt;/td&gt;<br>	&lt;/tr&gt;<br>	&lt;tr&gt;<br>		&lt;td style="border:1px solid black;padding:10px"&gt;Pedro&lt;/td&gt;<br>		&lt;td style="border:1px solid black;padding:10px"&gt;Calvo-Sotelo&lt;/td&gt;<br>		&lt;td style="border:1px solid black;padding:10px"&gt;Martínez&lt;/td&gt;<br>		&lt;td style="border:1px solid black;padding:10px"&gt;44&lt;/td&gt;<br>	&lt;/tr&gt;<br>&lt;/table&gt;</code></pre><br>
+				Y quedaría así:<br>
+				<table style="width:50%;border:1px;padding-left:40px;">
+				  <caption> Datos de personas</caption>
+				  <tr>
+					<th style="border:1px solid black;padding:10px">Nombre</th>
+					<th style="border:1px solid black;padding:10px" colspan="2">Apellidos</th>
+					<th style="border:1px solid black;padding:10px">Edad</th>
+				  </tr>
+				  <tr>
+					<td style="border:1px solid black;padding:10px">Ramón</td>
+					<td style="border:1px solid black;padding:10px">Fernández</td>
+					<td style="border:1px solid black;padding:10px">Romero</td>
+					<td style="border:1px solid black;padding:10px">19</td>
+				  </tr>
+				  <tr>
+					<td style="border:1px solid black;padding:10px">Pedro</td>
+					<td style="border:1px solid black;padding:10px">Calvo-Sotelo</td>
+					<td style="border:1px solid black;padding:10px">Martínez</td>
+					<td style="border:1px solid black;padding:10px">44</td>
+				  </tr>
+				</table>
+				<div style="margin-top: 50px;">
+					<p><b>Links útiles:</b></p>
+					<ul><!--This makes a list-->
+						<li><a href="https://html-online.com/editor/" target="_blank" rel="noopener">Para probar código html</a></li>
+						<li><a href="http://www.makeuseof.com/tag/7-cool-html-effects-that-anyone-can-add-to-their-website-nb/" target="_blank" rel="noopener">Para poner efectos guays</a></li>
+						<li><a href="https://html-color-codes.info/codigos-de-colores-hexadecimales/" target="_blank" rel="noopener">Selector colores</a></li>
+						<li><a href="https://rmnhg.github.io/testing">Laboratorio</a></li>
+						<li><a href="https://rmnhg.github.io/">Página principal</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</div>
-	<p> <!--I have to use "&lt;" for "<" and "&gt;" for ">"-->
-	<b>&lt;!DOCTYPE html&gt;</b> define la versión de HTML en la que está escrita la página. En este caso estamos usando la versión 5 pero se podría definir otra más antigua.<br>
-	<b>&lt;html&gt;&lt;/html&gt;</b> esto le dice al navegador que la página está escrita en HTML. Siempre va después de &lt;!DOCTYPE&gt;.<br>
-	<b>&lt;head&gt;&lt;/head&gt;</b> esto es la cabezera de la página. Aquí no va el contenido, aquí se establecen parámetros como el título de la página, el icono, las metaetiquetas, scripts, etc.<br>
-	<b>&lt;body&gt;&lt;/body&gt;</b> aquí va todo el contenido normal de la página. Por ejemplo los textos, las imágenes, los vídeos, los botones, etc.<br>
-   Estos elementos se llaman tags o etiquetas. Todos tienen una etiqueta de entrada y otra de salida que empieza por "<b>/</b>" exceptuando la etiqueta <b>&lt;br&gt;</b>, que puede estar sola.
-	</p>
-	<br>
-	<h3><b>Etiquetas de la cabezera de la página "&lt;head&gt;"</b></h3>
-	<p>La etiqueta <b>head</b> sirve para definir la estructura principal de la página. Dentro de esta etiqueta puedes encontrar otras como:<br>
-	<b>&lt;title&gt;&lt;/title&gt;</b> como dice su nombre, se encarga de darle un título a la página que aparecerá en la pestaña del navegador.<br>
-	<b>&lt;meta&gt;&lt;/meta&gt;</b> sta etiqueta tiene muchas opciones y sirve para definir qué contenido existe en la página y a quién o a qué pertenece.<br>
-	<b>&lt;link rel="" type="" href=""/&gt;</b> esta etiqueta es un enlace (como una acceso directo del ordenador) de un archivo externo a la página con nuestra página, que le asigna un nombre.<br>
-	<small>No tiene segunda etiqueta para cerrar</small><br>
-	<small>Se usa sobre todo para establecer un tema en la página</small><br>
-	<b>&lt;style&gt; { }&lt;/style&gt;</b> establece el diseño de uno o varios elementos en una página. Entre los corchetes se sitúan definiciones como colores, posiciones, etc. Puede haber varias etiquetas style en cada página.<br><br>
-	Ejemplo de &lt;head&gt;:
-	</p>
-	<pre><code>&lt;title&gt;Ramón Hdez - Teoría&lt;/title&gt;<br>&lt;link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"&gt;<br><br>&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;<br>&lt;meta name="Ramón HDEZ - Creador" content="Copyright 2018 (c) Ramón Hernández García."&gt;<br>&lt;meta name="robots" content="NOODP"&gt;<br>&lt;meta name="description" content="Página personal de Ramón Hernández, estudiante madrileño."&gt;<br>&lt;meta name="keywords" content="Webpage, Ramón Hernández, rmnhg, kernel, linux, PC, Windows"&gt;<br>&lt;meta name="author" content="Ramón Hernández"&gt;<br>&lt;meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' /&gt;<br><br>&lt;link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" /&gt;<br>&lt;link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" /&gt;<br>&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" /&gt;<br><br>&lt;link href="assets/css/bootstrap.min.css" rel="stylesheet" /&gt;<br>&lt;link href="assets/css/material-kit.css" rel="stylesheet"/&gt;<br>&lt;link href="assets/css/demo.css" rel="stylesheet" /&gt;<br><br>&lt;style&gt;<br>h1 {color:red;}<br>p {color:blue;}<br>&lt;/style&gt;</code></pre>
-	<br>
-	<h2 id="body"><b>Cuerpo. Códigos frecuentes.</b></h1>
-	<br>Aquí os voy a dejar los códigos de elementos comunes y no tan comunes en una página dentro de &lt;body&gt;:
-	<ul><!--This makes a list-->
-		<li><a href="#images">Imágenes</a></li>
-		<li><a href="#videos">Vídeos</a></li>
-		<li><a href="#music">Musica</a></li>
-		<li><a href="#javascript">Javascripts</a></li>
-	</ul>
-	<h3 id="images"><b>Cómo poner imágenes</b></h3>
-	Si queremos usar imágenes en nuestra página web debemos usar la etiqueta de <b>&lt;img width="" height=""&gt;&lt;/img&gt;</b> con el atributo src="&lt;link&gt;", width="&lt;ancho_de_la_imagen&gt; y height="&lt;altura_de_la_imagen&gt;".<br>
-	Por ejemplo si quiero insertar <a href="http://c1.staticflickr.com/4/3128/2436481628_881688fa7f.jpg" target="_blank">esta imagen</a> deberé escribir:<br>
-	<pre><code>&lt;img src="http://c1.staticflickr.com/4/3128/2436481628_881688fa7f.jpg"&gt;&lt;/img&gt;</code></pre>
-	<br>
-	<b>Quedaría así:</b>
-	<br>
-	<img src="http://c1.staticflickr.com/4/3128/2436481628_881688fa7f.jpg"></img><br>
-	<br>
-	Y como no he añadido ni width ni height la imagen se muestra en su tamaño original.
-	<br>
-	<br>
-	<h3 id="videos"><b>Cómo poner vídeos</b></h3>
-	Para poner vídeos en nuestra página tenemos dos opciones:<br>
-	<ol>
-		<li>Usar la etiqueta <b>&lt;iframe width="" height=""&gt;&lt;/iframe&gt;</b> : Esta etiqueta lo que hace es abrir una página web dentro de otra. Es útil para abrir una página con un reproductor de vídeo, como es el caso de los vídeo embed de YouTube con links del formato de "https://www.youtube.com/embed/12345"<br>
-		Por ejemplo si quiero insertar <a href="https://www.youtube.com/watch?v=ADziCf-2EtU" target="_blank">este vídeo de AuronPlay</a> deberé escribir:<br>
-		<pre><code>&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/ADziCf-2EtU" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
-		<br>
-		<b>Quedaría así:</b>
-		<br>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/ADziCf-2EtU" frameborder="0" allowfullscreen></iframe>
-		<br>
-		<b>Nota:</b> los atributos de <b>frameborder="0"</b> y <b>allowfullscreen</b> hacen que no aparezca el marco de este subnavegador y que se pueda poner en pantalla completa.
-		<br>
-		<br>
-		<li>Usar la etiqueta <b>&lt;video width="" height="" controls&gt;&lt;/video&gt;</b> : Esta etiqueta lo que hace es abrir el reproductor nativo del navegador para reproducir vídeos directamente de una dirección determinada. Para establecer el vídeo necesito poner el atributo controls para activar los controles del reproductor y meter dentro otra etiqueta: <b>&lt;source&gt;</b> con los atributos src="&lt;dirección_del_vídeo&gt;" y type="&lt;formato_del_vídeo&gt;".<br>
-		Por ejemplo si quiero insertar <a href="assets/video/SampleVideo_1280x720_2mb" target="_blank">este vídeo</a> deberé escribir:<br>
-		<pre><code>&lt;video width="560" height="315" controls&gt;&lt;source src="assets/video/SampleVideo_1280x720_2mb.mp4" type="video/mp4"&gt;&lt;/video&gt;</code></pre>
-		<br>
-		<b>Quedaría así:</b>
-		<br>
-		<video width="560" height="315" controls><source src="assets/video/SampleVideo_1280x720_2mb.mp4" type="video/mp4">Siento lo ocurrido, pero tu navegador no acepta este formato de vídeo</video>
-	</ol>
-	<br>
-	<br>
-	<h3 id="music"><b>Cómo poner música</b></h3>
-	Si queremos poner música en nuestra página web debemos usar la etiqueta <b>&lt;audio&gt;&lt;/audio&gt;</b> con el atributo controls para activar los controles del reproductor y con otra etiqueta dentro: <b>&lt;source&gt;</b> con los atributos src="&lt;dirección_del_audio&gt;" y type="&lt;formato_del_audio&gt;".<br>
-	Por ejemplo si quiero insertar <a href="assets/audio/horse.mp3" target="_blank">este sonido de caballo</a> deberé escribir:<br>
-	<pre><code>&lt;audio controls&gt;&lt;source src="assets/audio/horse.mp3" type="audio/mpeg"&gt;&lt;/audio&gt;</code></pre>
-	<br>
-	<b>Quedaría así:</b>
-	<br>
-	<audio controls><source src="assets/audio/horse.mp3" type="audio/mpeg">Siento lo ocurrido, pero tu navegador no acepta este formato de audio.</audio><br>
-	<br>
-	<br>
-	<h3 id="javascript"><b>Cómo poner javascript</b></h3>
-	<br>
-	<br>
-	<h2 id="more"><b>Más cosillas: colores, tipos de texto, parametros, alineación, etc.</b></h1>
-	<br>Más cosas:
-	<ul><!--This makes a list-->
-		<li><a href="#textformats">Formatos de texto</a></li>
-		<li><a href="#table">Tabla</a></li>
-		<li><a href="#id">ID</a></li>
-		<li><a href="#alt">alt</a></li>
-	</ul>
-	<h3 id="textformats"><b>Formatos de texto</b></h3>
-	Existen etiquetas  que nos permiten customizar los textos. Nos podemos encontrar algunas como:<br>
-	<b>&lt;b&gt;&lt;/b&gt;</b> o <b>&lt;strong&gt;&lt;/strong&gt;</b> hace que el texto salga en negrita.<br>
-		<div style="margin: 10px;">
-		Ejemplo: <pre><code>&lt;b&gt;Esto será un texto en negrita&lt;/b&gt;</code></pre><br>
-		<b>Esto será un texto en negrita</b><br>
-		</div>
-	<b>&lt;i&gt;&lt;/i&gt;</b> hace que el texto salga en fuente itálica, en cursiva.<br> 
-		<div style="margin: 10px;">
-		Ejemplo: <pre><code>&lt;i&gt;Esto será un texto en cursiva&lt;/i&gt;</code></pre><br>
-		<i>Esto será un texto en cursiva</i><br>
-		</div>
-	<b>&lt;mark&gt;&lt;/mark&gt;</b> subraya el texto en amarillo.<br>
-		<div style="margin: 10px;">
-		Ejemplo: <pre><code>&lt;mark&gt;Esto será un texto subrayado en amarillo&lt;/mark&gt;</code></pre><br>
-		<mark>Esto será un texto subrayado en amarillo</mark><br>
-		</div>
-	<b>&lt;ins&gt;&lt;/ins&gt;</b> subraya el texto por debajo.<br>
-		<div style="margin: 10px;">
-		Ejemplo: <pre><code>&lt;ins&gt;Esto será un texto subrayado&lt;/ins&gt;</code></pre><br>
-		<ins>Esto será un texto subrayado</ins><br>
-		</div>
-	<b>&lt;small&gt;&lt;/small&gt;</b> sirve para introducir aclaraciones, hace el texto un poco más pequeño.<br>
-		<div style="margin: 10px;">
-		Ejemplo: <pre><code>&lt;small&gt;Esto es un texto en pequeño&lt;/small&gt;</code></pre><br>
-		<small>Esto es un texto en pequeño</small><br>
-		</div>
-	<b>&lt;p&gt;&lt;/p&gt;</b> sirve para crear párrafos en la página. No conservan los saltos de línea.<br>
-		<div style="margin: 10px;">
-		Ejemplo: <pre><code>&lt;p&gt;Esto es un párrafo<br>con un salto de línea&lt;/p&gt;</code></pre><br>
-		<p>Esto es un párrafo
-con un salto de línea</p><br>
-		</div>
-	<b>&lt;pre&gt;&lt;/pre&gt;</b> sirve para insertar texto preformateado en la página. Sí conserva los saltos de línea.<br>
-		<div style="margin: 10px;">
-		Ejemplo: <pre><code>&lt;pre&gt;Esto es un texto preformateado<br>con un salto de línea&lt;/pre&gt;</code></pre><br>
-		<pre>Esto es un texto preformateado
-con un salto de línea</pre><br>
-		</div>
-		<br>
-		<br>
-	<h3 id="table"><b>Tabla</b></h3>
-	Para crear una tabla deberemos usar la etiqueta <b>&lt;table&gt;&lt;/table&gt;</b> con varias subetiquetas:<br>
-	<b>&lt;tr&gt;&lt;/tr&gt;</b> crea una fila horizontal y, a su vez, contiene más etiquetas:<br>
-		<ol>
-			<li><b>&lt;th&gt;&lt;/th&gt;</b> que sirve para crear la primera fila que contiene los nombres de los elementos de cada columna.</li>
-			<li><b>&lt;td&gt;&lt;/td&gt;</b> que sirve para añadir las siguientes filas, todas comunes.</li>
-		</ol>
-	<b>&lt;caption&gt;&lt;/caption&gt;</b> que crea un título para la tabla. Esto es opcional y también va dentro de <b>&lt;table&gt;&lt;/table&gt;</b><br>	
-	Por ejemplo, si queremos introducir una tabla con datos de personas podemos escribir:<br>
-	<pre><code>&lt;table style="width:50%;border:1px;padding-left:40px;"&gt;<br>	&lt;caption> Datos de personas&lt;/caption><br>	&lt;tr&gt;<br>		&lt;th style="border:1px solid black;padding:10px"&gt;Nombre&lt;/th&gt;<br>		&lt;th style="border:1px solid black;padding:10px" colspan="2"&gt;Apellidos&lt;/th&gt;<br>		&lt;th style="border:1px solid black;padding:10px"&gt;Edad&lt;/th&gt;<br>	&lt;/tr&gt;<br>	&lt;tr&gt;<br>		&lt;td style="border:1px solid black;padding:10px"&gt;Ramón&lt;/td&gt;<br>		&lt;td style="border:1px solid black;padding:10px"&gt;Fernández&lt;/td&gt;<br>		&lt;td style="border:1px solid black;padding:10px"&gt;Romero&lt;/td&gt;<br>		&lt;td style="border:1px solid black;padding:10px"&gt;19&lt;/td&gt;<br>	&lt;/tr&gt;<br>	&lt;tr&gt;<br>		&lt;td style="border:1px solid black;padding:10px"&gt;Pedro&lt;/td&gt;<br>		&lt;td style="border:1px solid black;padding:10px"&gt;Calvo-Sotelo&lt;/td&gt;<br>		&lt;td style="border:1px solid black;padding:10px"&gt;Martínez&lt;/td&gt;<br>		&lt;td style="border:1px solid black;padding:10px"&gt;44&lt;/td&gt;<br>	&lt;/tr&gt;<br>&lt;/table&gt;</code></pre><br>
-	Y quedaría así:<br>
-			<table style="width:50%;border:1px;padding-left:40px;">
-	  <caption> Datos de personas</caption>
-	  <tr>
-		<th style="border:1px solid black;padding:10px">Nombre</th>
-		<th style="border:1px solid black;padding:10px" colspan="2">Apellidos</th>
-		<th style="border:1px solid black;padding:10px">Edad</th>
-	  </tr>
-	  <tr>
-		<td style="border:1px solid black;padding:10px">Ramón</td>
-		<td style="border:1px solid black;padding:10px">Fernández</td>
-		<td style="border:1px solid black;padding:10px">Romero</td>
-		<td style="border:1px solid black;padding:10px">19</td>
-	  </tr>
-	  <tr>
-		<td style="border:1px solid black;padding:10px">Pedro</td>
-		<td style="border:1px solid black;padding:10px">Calvo-Sotelo</td>
-		<td style="border:1px solid black;padding:10px">Martínez</td>
-		<td style="border:1px solid black;padding:10px">44</td>
-	  </tr>
-	</table> 
-	<div style="margin-top: 50px;">  
-	<p><b>Links útiles:</b></p>
-	<ul><!--This makes a list-->
-	<li><a href="https://html-online.com/editor/" target="_blank" rel="noopener">Para probar código html</a></li>
-	<li><a href="http://www.makeuseof.com/tag/7-cool-html-effects-that-anyone-can-add-to-their-website-nb/" target="_blank" rel="noopener">Para poner efectos guays</a></li>
-	<li><a href="https://html-color-codes.info/codigos-de-colores-hexadecimales/" target="_blank" rel="noopener">Selector colores</a></li>
-	<li><a href="https://rmnhg.github.io/testing">Laboratorio</a></li>
-	<li><a href="https://rmnhg.github.io/">Página principal</a></li>
-	</ul>
-	</div>
-	</div>
-	</div>
-	</div>
-	
+
 	<footer class="footer">
 	    <div class="container">
 	        <nav class="pull-left">
@@ -390,22 +390,23 @@ con un salto de línea</pre><br>
 	</script>
 	<script>
 		function aud_play_pause() {
-			var myAudio = document.getElementById("musica_de_fondo");
-			if (myAudio.paused) {
-				myAudio.play();
+			var player = document.getElementById('musica_de_fondo');
+			if (player.paused) {
+				player.play();
+				console.log('Audio is now playing');
 			} else {
-				myAudio.pause();
+				player.pause();
+				console.log('Audio is now paused');
 			}
 		}
-	</script>
-	<script>
+
 		function SetVolume(val)
 		{
 			var player = document.getElementById('musica_de_fondo');
-			console.log('Before: ' + player.volume);
+			console.log('Volume before: ' + player.volume);
 			player.volume = val / 100;
-			console.log('After: ' + player.volume);
+			console.log('Volume now: ' + player.volume);
 		}
 	</script>
-	
+
 </html>
